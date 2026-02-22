@@ -2,17 +2,37 @@ from fastapi import APIRouter, Depends, HTTPException, File, Form, UploadFile
 import tempfile
 import os
 import hashlib
+from typing import Optional, cast, Dict, Any, List
 from sqlalchemy.orm import Session
-from src.api.schemas import SpecQueryRequest, SpecQueryResponse
+from src.api.schemas import SpecQueryRequest, SpecQueryResponse, ExtendedSpecQueryResponse, CrossSellSuggestion
 from src.storage.database import get_db
 from src.storage.schema import SpecFact
 
 router = APIRouter(prefix="/retrieval", tags=["retrieval"])
 
+OEM_UPGRADE_PATHS = {
+    "maruti_suzuki": {
+        "wagonr": {
+            "next_tier": ["ciaz", "brezza"],
+            "reason_tags": ["more_power", "premium_features", "suv_segment"]
+        }
+    }
+}
+
 def generate_variant_hash(oem_id: str, model_code: str, model_year: int, trim: str, engine_code: str, transmission: str, fuel_type: str, region: str) -> str:
     """Deterministic hash generator for O(1) variant lookup."""
     key = f"{oem_id}|{model_code}|{model_year}|{trim}|{engine_code}|{transmission}|{fuel_type}|{region}"
     return hashlib.md5(key.encode("utf-8")).hexdigest()
+
+def _get_cross_sell(oem_id: str, model_code: str) -> Optional[List[CrossSellSuggestion]]:
+    suggestions = None
+    if oem_id in OEM_UPGRADE_PATHS and model_code in OEM_UPGRADE_PATHS[oem_id]:
+        upgrade_info = OEM_UPGRADE_PATHS[oem_id][model_code]
+        suggestions = [
+            CrossSellSuggestion(model=m, reason=upgrade_info["reason_tags"][0])
+            for m in upgrade_info["next_tier"]
+        ]
+    return suggestions
 
 @router.post("/upload")
 async def upload_brochure(
@@ -30,7 +50,7 @@ async def upload_brochure(
     """
     Ingests a raw brochure PDF, processes its layout, and extracts variant features to the database.
     """
-    if not file.filename.endswith(".pdf"):
+    if not file.filename or not file.filename.endswith(".pdf"):
         raise HTTPException(status_code=400, detail="Only PDF files are supported.")
         
     # Save the file temporarily
@@ -76,94 +96,135 @@ async def upload_brochure(
     finally:
         os.remove(temp_path)
 
-@router.post("/query", response_model=SpecQueryResponse)
+@router.post("/query", response_model=ExtendedSpecQueryResponse)
 def query_spec(request: SpecQueryRequest, db: Session = Depends(get_db)):
     """
     Primary endpoint for Voice Agents to fetch a specific vehicle feature.
     Phase 1: Requires all variant configurations to be present or uses basic inference.
     """
-    # [TO-DO] Config Resolution Engine Logic: Infer missing parameters 
+    # 1. Config Resolution Engine Logic: Infer missing parameters 
     inferred_trim = request.trim
     inferred_engine = request.engine_code
     inferred_trans = request.transmission
     inferred_fuel = request.fuel_type
     
+    valid_config = None
     if not all([inferred_trim, inferred_engine, inferred_trans, inferred_fuel]):
-        # Simple Phase 1 default/fallback logic could be implemented here
-        # E.g., defaulting to the highest volume trim if missing
-        pass
+        # Phase 1 Config Resolution: Find first available config for this model
+        valid_config = db.query(SpecFact).filter(
+            SpecFact.oem_id == request.oem_id,
+            SpecFact.campaign_id == request.campaign_id,
+            SpecFact.model_code == request.model_code,
+            SpecFact.model_year == request.model_year,
+            SpecFact.region == request.region
+        ).first()
+        
+    if not valid_config:
+        # If we failed to find any valid_config, we cannot logically infer missing dimensions from None.
+        if not all([request.trim, request.engine_code, request.transmission, request.fuel_type]):
+            raise HTTPException(status_code=400, detail="Missing configuration: Could not resolve valid baseline configuration.")
 
-    # Ensure we have all necessary parts built 
-    # (If we don't, we return a clarification request or 400 Bad Request if missing critical dimensions)
-    if not inferred_trim:
-        raise HTTPException(status_code=400, detail="Missing configuration: Trim could not be resolved.")
+    if valid_config:
+        inferred_trim = inferred_trim or cast(str, valid_config.trim)
+        inferred_engine = inferred_engine or cast(str, valid_config.engine_code)
+        inferred_trans = inferred_trans or cast(str, valid_config.transmission)
+        inferred_fuel = inferred_fuel or cast(str, valid_config.fuel_type)
+
+    if not inferred_trim or not inferred_engine or not inferred_trans or not inferred_fuel:
+        raise HTTPException(status_code=400, detail="Missing configuration: Dimensions could not be resolved.")
 
     derived_variant_id = generate_variant_hash(
         request.oem_id, request.model_code, request.model_year, inferred_trim,
         inferred_engine, inferred_trans, inferred_fuel, request.region
     )
 
-    # 1. Redis Cache Lookup (O(1) optimal path)
     from src.storage.cache import get_spec_from_cache, set_spec_in_cache
     from src.ontology.engine import OntologyEngine
 
-    cached_fact = get_spec_from_cache(derived_variant_id, request.feature_id)
+    resolved_feature_id = OntologyEngine.resolve_feature_id(request.feature_id)
+
+    # 1. Redis Cache Lookup (O(1) optimal path)
+    cached_fact = get_spec_from_cache(derived_variant_id, resolved_feature_id)
     if cached_fact:
         # Cache Hit
-        answer_text = OntologyEngine.render_template(request.feature_id, cached_fact["value_json"])
+        answer_text = OntologyEngine.render_template(resolved_feature_id, cached_fact["value_json"])
         confidence = "high" if cached_fact["extraction_confidence"] >= 0.95 else "medium"
-        return SpecQueryResponse(
+        return ExtendedSpecQueryResponse(
             answer=answer_text,
-            citation=f"According to page {cached_fact['source_page']} of the {cached_fact['source_doc_id']}",
+            citation=f"According to page {cached_fact['source_page']} of the {cached_fact.get('source_doc_id', 'brochure')}",
             confidence=confidence,
             source={
-                "document": cached_fact["source_doc_id"],
+                "document": cached_fact.get("source_doc_id", "cache"),
                 "page": cached_fact["source_page"],
                 "extraction_confidence": cached_fact["extraction_confidence"]
             },
             spec_details={
-                "feature": request.feature_id,
+                "feature": resolved_feature_id,
                 "availability_state": cached_fact["availability_state"],
                 "value": cached_fact["value_json"]
-            }
+            },
+            cross_sell_suggestions=_get_cross_sell(request.oem_id, request.model_code)
         )
 
-    # 2. Cache Miss - PostgreSQL Lookup
+    # 2. Cache Miss - PostgreSQL Lookup with Tenant Isolation
     fact = db.query(SpecFact).filter(
+        SpecFact.oem_id == request.oem_id,
+        SpecFact.campaign_id == request.campaign_id,
         SpecFact.derived_variant_id == derived_variant_id,
-        SpecFact.feature_id == request.feature_id
+        SpecFact.feature_id == resolved_feature_id
     ).first()
+
+    # Fallback Query Path
+    if not fact:
+        fallback_terms = [resolved_feature_id]
+        if resolved_feature_id in OntologyEngine.CORE_FEATURES:
+            fallback_terms.extend(OntologyEngine.CORE_FEATURES[resolved_feature_id].get("synonyms", []))
+            
+        fact = db.query(SpecFact).filter(
+            SpecFact.oem_id == request.oem_id,
+            SpecFact.campaign_id == request.campaign_id,
+            SpecFact.derived_variant_id == derived_variant_id,
+            SpecFact.feature_id.in_(fallback_terms)
+        ).first()
 
     if not fact:
         raise HTTPException(status_code=404, detail="Feature details not found for this variant.")
 
     # 3. Populate Cache
+    value_json_dict = cast(Dict[str, Any], fact.value_json)
+    availability_state_val = str(fact.availability_state.value) if hasattr(fact.availability_state, 'value') else str(fact.availability_state)
+    source_page_int = cast(int, fact.source_page)
+    source_doc_id_str = cast(str, fact.source_doc_id)
+    extraction_conf_float = cast(float, fact.extraction_confidence)
+    feature_id_str = cast(str, fact.feature_id)
+
     payload = {
-        "value_json": fact.value_json,
-        "availability_state": fact.availability_state.value,
-        "source_page": fact.source_page,
-        "source_doc_id": fact.source_doc_id,
-        "extraction_confidence": fact.extraction_confidence,
-        "precomputed_value_display": fact.precomputed_value_display
+        "value_json": value_json_dict,
+        "availability_state": availability_state_val,
+        "source_page": source_page_int,
+        "source_doc_id": source_doc_id_str,
+        "extraction_confidence": extraction_conf_float,
+        "precomputed_value_display": cast(Optional[str], fact.precomputed_value_display)
     }
-    set_spec_in_cache(derived_variant_id, request.feature_id, payload)
+    set_spec_in_cache(derived_variant_id, resolved_feature_id, payload)
 
     # Generate Voice Response using Ontology Template
-    answer_text = OntologyEngine.render_template(request.feature_id, fact.value_json)
-    confidence = "high" if fact.extraction_confidence >= 0.95 else "medium"
+    answer_text = OntologyEngine.render_template(resolved_feature_id, value_json_dict)
+    confidence = "high" if extraction_conf_float >= 0.95 else ("medium" if feature_id_str == resolved_feature_id else "low")
 
-    return SpecQueryResponse(
+    return ExtendedSpecQueryResponse(
         answer=answer_text,
-        citation=f"According to page {fact.source_page} of the {fact.source_doc_id}",
+        citation=f"According to page {source_page_int} of the {source_doc_id_str}",
         confidence=confidence,
         source={
-            "document": fact.source_doc_id,
-            "page": fact.source_page,
-            "extraction_confidence": fact.extraction_confidence
+            "document": source_doc_id_str,
+            "page": source_page_int,
+            "extraction_confidence": extraction_conf_float
         },
         spec_details={
-            "feature": fact.feature_id,
-            "availability_state": fact.availability_state,
-            "value": fact.value_json
-        }
+            "feature": feature_id_str,
+            "availability_state": availability_state_val,
+            "value": value_json_dict
+        },
+        cross_sell_suggestions=_get_cross_sell(request.oem_id, request.model_code)
     )

@@ -1,12 +1,7 @@
 {
-    "venvPath": "/Users/seemantshankar/Documents/Projects/spherical-outcalling-agent-1",
+    "venvPath": ".",
     "venv": "venv",
     "extraPaths": [
-        "/Users/seemantshankar/Documents/Projects/spherical-outcalling-agent-1"
-    ],
-    "executionEnvironments": [
-        {
-            "root": "/Users/seemantshankar/Documents/Projects/spherical-outcalling-agent-1"
-        }
+        "."
     ]
 }
