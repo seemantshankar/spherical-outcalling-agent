@@ -1,0 +1,14 @@
+SQLAlchemy==2.0.46
+psycopg2-binary==2.9.11
+pydantic==2.10.6
+pydantic-settings==2.11.0
+redis==5.2.1
+fastapi==0.128.8
+uvicorn==0.39.0
+camelot-py[cv]==0.11.0
+tabula-py==2.10.0
+PyMuPDF==1.26.5
+pdfplumber
+opencv-python-headless==4.13.0.92
+streamlit==1.50.0
+python-multipart==0.0.20
