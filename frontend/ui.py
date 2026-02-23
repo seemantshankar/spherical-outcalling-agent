@@ -1,3 +1,4 @@
+# pyre-ignore-all-errors
 import streamlit as st
 import requests
 import json
@@ -8,7 +9,8 @@ st.title("🚗 OEM RAG Campaign Manager Platform")
 st.markdown("This interface visualizes the **Phase 1: Ingestion & Extraction Core** allowing operators to upload PDFs and verify real-time Voice-Agent data retrievals.", unsafe_allow_html=True)
 
 # URL of FastAPI backend
-BACKEND_URL = "http://localhost:8000/retrieval"
+import os
+BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000/retrieval")
 
 tab1, tab2 = st.tabs(["Ingestion (Upload Brochure)", "Voice Retrieval (Query Data)"])
 

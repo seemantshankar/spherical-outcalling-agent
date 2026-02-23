@@ -1,3 +1,4 @@
+# pyre-ignore-all-errors
 from fastapi import FastAPI
 from src.api.router import router as retrieval_router
 from src.storage.database import init_db
@@ -7,6 +8,9 @@ app = FastAPI(
     description="Phase 1: Extraction & Retrieval modules for automotive specs.",
     version="1.0.0"
 )
+
+import logging
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 
 # In a real production setup, we'd use Alembic for migrations instead of create_all
 @app.on_event("startup")

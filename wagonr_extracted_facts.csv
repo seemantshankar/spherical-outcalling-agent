@@ -1,0 +1,777 @@
+Category,Feature_ID,Trim,Value,Availability
+uncategorized,ext_unreviewed_electronic_stability_program,Without ESP,-,not_available
+uncategorized,ext_unreviewed_electronic_stability_program,With ESP,Standard,standard
+uncategorized,ext_unreviewed_length_(mm),1.0L LXi MT,3655,standard
+uncategorized,ext_unreviewed_length_(mm),1.0L LXi CNG MT,3655,standard
+uncategorized,ext_unreviewed_length_(mm),1.0L VXi MT,3655,standard
+uncategorized,ext_unreviewed_length_(mm),1.0L VXi AGS,3655,standard
+uncategorized,ext_unreviewed_length_(mm),1.0L VXi CNG MT,3655,standard
+uncategorized,ext_unreviewed_length_(mm),1.2L ZXi MT,3655,standard
+uncategorized,ext_unreviewed_length_(mm),1.2L ZXi AGS,3655,standard
+uncategorized,ext_unreviewed_length_(mm),1.2L ZXi+ MT,3655,standard
+uncategorized,ext_unreviewed_length_(mm),1.2L ZXi+ AGS,3655,standard
+uncategorized,ext_unreviewed_width_(mm),1.0L LXi MT,1620,standard
+uncategorized,ext_unreviewed_width_(mm),1.0L LXi CNG MT,1620,standard
+uncategorized,ext_unreviewed_width_(mm),1.0L VXi MT,1620,standard
+uncategorized,ext_unreviewed_width_(mm),1.0L VXi AGS,1620,standard
+uncategorized,ext_unreviewed_width_(mm),1.0L VXi CNG MT,1620,standard
+uncategorized,ext_unreviewed_width_(mm),1.2L ZXi MT,1620,standard
+uncategorized,ext_unreviewed_width_(mm),1.2L ZXi AGS,1620,standard
+uncategorized,ext_unreviewed_width_(mm),1.2L ZXi+ MT,1620,standard
+uncategorized,ext_unreviewed_width_(mm),1.2L ZXi+ AGS,1620,standard
+uncategorized,ext_unreviewed_height_(mm),1.0L LXi MT,1675,standard
+uncategorized,ext_unreviewed_height_(mm),1.0L LXi CNG MT,1675,standard
+uncategorized,ext_unreviewed_height_(mm),1.0L VXi MT,1675,standard
+uncategorized,ext_unreviewed_height_(mm),1.0L VXi AGS,1675,standard
+uncategorized,ext_unreviewed_height_(mm),1.0L VXi CNG MT,1675,standard
+uncategorized,ext_unreviewed_height_(mm),1.2L ZXi MT,1675,standard
+uncategorized,ext_unreviewed_height_(mm),1.2L ZXi AGS,1675,standard
+uncategorized,ext_unreviewed_height_(mm),1.2L ZXi+ MT,1675,standard
+uncategorized,ext_unreviewed_height_(mm),1.2L ZXi+ AGS,1675,standard
+uncategorized,ext_unreviewed_wheelbase_(mm),1.0L LXi MT,2435,standard
+uncategorized,ext_unreviewed_wheelbase_(mm),1.0L LXi CNG MT,2435,standard
+uncategorized,ext_unreviewed_wheelbase_(mm),1.0L VXi MT,2435,standard
+uncategorized,ext_unreviewed_wheelbase_(mm),1.0L VXi AGS,2435,standard
+uncategorized,ext_unreviewed_wheelbase_(mm),1.0L VXi CNG MT,2435,standard
+uncategorized,ext_unreviewed_wheelbase_(mm),1.2L ZXi MT,2435,standard
+uncategorized,ext_unreviewed_wheelbase_(mm),1.2L ZXi AGS,2435,standard
+uncategorized,ext_unreviewed_wheelbase_(mm),1.2L ZXi+ MT,2435,standard
+uncategorized,ext_unreviewed_wheelbase_(mm),1.2L ZXi+ AGS,2435,standard
+uncategorized,ext_unreviewed_turning_radius_(m),1.0L LXi MT,4.7,standard
+uncategorized,ext_unreviewed_turning_radius_(m),1.0L LXi CNG MT,4.7,standard
+uncategorized,ext_unreviewed_turning_radius_(m),1.0L VXi MT,4.7,standard
+uncategorized,ext_unreviewed_turning_radius_(m),1.0L VXi AGS,4.7,standard
+uncategorized,ext_unreviewed_turning_radius_(m),1.0L VXi CNG MT,4.7,standard
+uncategorized,ext_unreviewed_turning_radius_(m),1.2L ZXi MT,4.7,standard
+uncategorized,ext_unreviewed_turning_radius_(m),1.2L ZXi AGS,4.7,standard
+uncategorized,ext_unreviewed_turning_radius_(m),1.2L ZXi+ MT,4.7,standard
+uncategorized,ext_unreviewed_turning_radius_(m),1.2L ZXi+ AGS,4.7,standard
+uncategorized,ext_unreviewed_engine_type,1.0L LXi MT,K10C,standard
+uncategorized,ext_unreviewed_engine_type,1.0L LXi CNG MT,K10C,standard
+uncategorized,ext_unreviewed_engine_type,1.0L VXi MT,K10C,standard
+uncategorized,ext_unreviewed_engine_type,1.0L VXi AGS,K10C,standard
+uncategorized,ext_unreviewed_engine_type,1.0L VXi CNG MT,K10C,standard
+uncategorized,ext_unreviewed_engine_type,1.2L ZXi MT,K12N,standard
+uncategorized,ext_unreviewed_engine_type,1.2L ZXi AGS,K12N,standard
+uncategorized,ext_unreviewed_engine_type,1.2L ZXi+ MT,K12N,standard
+uncategorized,ext_unreviewed_engine_type,1.2L ZXi+ AGS,K12N,standard
+uncategorized,ext_unreviewed_capacity_(cc),1.0L LXi MT,998,standard
+uncategorized,ext_unreviewed_capacity_(cc),1.0L LXi CNG MT,998,standard
+uncategorized,ext_unreviewed_capacity_(cc),1.0L VXi MT,998,standard
+uncategorized,ext_unreviewed_capacity_(cc),1.0L VXi AGS,998,standard
+uncategorized,ext_unreviewed_capacity_(cc),1.0L VXi CNG MT,998,standard
+uncategorized,ext_unreviewed_capacity_(cc),1.2L ZXi MT,1197,standard
+uncategorized,ext_unreviewed_capacity_(cc),1.2L ZXi AGS,1197,standard
+uncategorized,ext_unreviewed_capacity_(cc),1.2L ZXi+ MT,1197,standard
+uncategorized,ext_unreviewed_capacity_(cc),1.2L ZXi+ AGS,1197,standard
+uncategorized,ext_unreviewed_number_of_cylinders,1.0L LXi MT,3,standard
+uncategorized,ext_unreviewed_number_of_cylinders,1.0L LXi CNG MT,3,standard
+uncategorized,ext_unreviewed_number_of_cylinders,1.0L VXi MT,3,standard
+uncategorized,ext_unreviewed_number_of_cylinders,1.0L VXi AGS,3,standard
+uncategorized,ext_unreviewed_number_of_cylinders,1.0L VXi CNG MT,3,standard
+uncategorized,ext_unreviewed_number_of_cylinders,1.2L ZXi MT,4,standard
+uncategorized,ext_unreviewed_number_of_cylinders,1.2L ZXi AGS,4,standard
+uncategorized,ext_unreviewed_number_of_cylinders,1.2L ZXi+ MT,4,standard
+uncategorized,ext_unreviewed_number_of_cylinders,1.2L ZXi+ AGS,4,standard
+uncategorized,ext_unreviewed_maximum_engine_output_petrol_(kw_@_rpm),1.0L LXi MT,50.4 kW (68.5 PS) @ 5600 rpm,standard
+uncategorized,ext_unreviewed_maximum_engine_output_petrol_(kw_@_rpm),1.0L LXi CNG MT,50.4 kW (68.5 PS) @ 5600 rpm,standard
+uncategorized,ext_unreviewed_maximum_engine_output_petrol_(kw_@_rpm),1.0L VXi MT,50.4 kW (68.5 PS) @ 5600 rpm,standard
+uncategorized,ext_unreviewed_maximum_engine_output_petrol_(kw_@_rpm),1.0L VXi AGS,50.4 kW (68.5 PS) @ 5600 rpm,standard
+uncategorized,ext_unreviewed_maximum_engine_output_petrol_(kw_@_rpm),1.0L VXi CNG MT,50.4 kW (68.5 PS) @ 5600 rpm,standard
+uncategorized,ext_unreviewed_maximum_engine_output_petrol_(kw_@_rpm),1.2L ZXi MT,66.9 kW (90.9 PS) @ 6000 rpm,standard
+uncategorized,ext_unreviewed_maximum_engine_output_petrol_(kw_@_rpm),1.2L ZXi AGS,66.9 kW (90.9 PS) @ 6000 rpm,standard
+uncategorized,ext_unreviewed_maximum_engine_output_petrol_(kw_@_rpm),1.2L ZXi+ MT,66.9 kW (90.9 PS) @ 6000 rpm,standard
+uncategorized,ext_unreviewed_maximum_engine_output_petrol_(kw_@_rpm),1.2L ZXi+ AGS,66.9 kW (90.9 PS) @ 6000 rpm,standard
+uncategorized,ext_unreviewed_maximum_engine_output_cng_(kw_@_rpm),1.0L LXi MT,-,not_available
+uncategorized,ext_unreviewed_maximum_engine_output_cng_(kw_@_rpm),1.0L LXi CNG MT,41.7 kW (56.6 PS) @ 5300 rpm (CNG mode) / 49.8 kW (67.7 PS) @ 5600 rpm (Petrol mode),standard
+uncategorized,ext_unreviewed_maximum_engine_output_cng_(kw_@_rpm),1.0L VXi MT,-,not_available
+uncategorized,ext_unreviewed_maximum_engine_output_cng_(kw_@_rpm),1.0L VXi AGS,-,not_available
+uncategorized,ext_unreviewed_maximum_engine_output_cng_(kw_@_rpm),1.0L VXi CNG MT,41.7 kW (56.6 PS) @ 5300 rpm (CNG mode) / 49.8 kW (67.7 PS) @ 5600 rpm (Petrol mode),standard
+uncategorized,ext_unreviewed_maximum_engine_output_cng_(kw_@_rpm),1.2L ZXi MT,-,not_available
+uncategorized,ext_unreviewed_maximum_engine_output_cng_(kw_@_rpm),1.2L ZXi AGS,-,not_available
+uncategorized,ext_unreviewed_maximum_engine_output_cng_(kw_@_rpm),1.2L ZXi+ MT,-,not_available
+uncategorized,ext_unreviewed_maximum_engine_output_cng_(kw_@_rpm),1.2L ZXi+ AGS,-,not_available
+uncategorized,ext_unreviewed_maximum_torque_petrol_(nm_@_rpm),1.0L LXi MT,91.1 Nm @ 3400 rpm (Petrol mode),standard
+uncategorized,ext_unreviewed_maximum_torque_petrol_(nm_@_rpm),1.0L LXi CNG MT,91.1 Nm @ 3400 rpm (Petrol mode),standard
+uncategorized,ext_unreviewed_maximum_torque_petrol_(nm_@_rpm),1.0L VXi MT,91.1 Nm @ 3400 rpm (Petrol mode),standard
+uncategorized,ext_unreviewed_maximum_torque_petrol_(nm_@_rpm),1.0L VXi AGS,91.1 Nm @ 3400 rpm (Petrol mode),standard
+uncategorized,ext_unreviewed_maximum_torque_petrol_(nm_@_rpm),1.0L VXi CNG MT,91.1 Nm @ 3400 rpm (Petrol mode),standard
+uncategorized,ext_unreviewed_maximum_torque_petrol_(nm_@_rpm),1.2L ZXi MT,113.7 Nm @ 4200 rpm,standard
+uncategorized,ext_unreviewed_maximum_torque_petrol_(nm_@_rpm),1.2L ZXi AGS,113.7 Nm @ 4200 rpm,standard
+uncategorized,ext_unreviewed_maximum_torque_petrol_(nm_@_rpm),1.2L ZXi+ MT,113.7 Nm @ 4200 rpm,standard
+uncategorized,ext_unreviewed_maximum_torque_petrol_(nm_@_rpm),1.2L ZXi+ AGS,113.7 Nm @ 4200 rpm,standard
+uncategorized,ext_unreviewed_maximum_torque_cng_(nm_@_rpm),1.0L LXi MT,-,not_available
+uncategorized,ext_unreviewed_maximum_torque_cng_(nm_@_rpm),1.0L LXi CNG MT,82.1 Nm @ 3400 rpm (CNG mode) / 91.1 Nm @ 3400 rpm (Petrol mode),standard
+uncategorized,ext_unreviewed_maximum_torque_cng_(nm_@_rpm),1.0L VXi MT,-,not_available
+uncategorized,ext_unreviewed_maximum_torque_cng_(nm_@_rpm),1.0L VXi AGS,-,not_available
+uncategorized,ext_unreviewed_maximum_torque_cng_(nm_@_rpm),1.0L VXi CNG MT,82.1 Nm @ 3400 rpm (CNG mode) / 91.1 Nm @ 3400 rpm (Petrol mode),standard
+uncategorized,ext_unreviewed_maximum_torque_cng_(nm_@_rpm),1.2L ZXi MT,-,not_available
+uncategorized,ext_unreviewed_maximum_torque_cng_(nm_@_rpm),1.2L ZXi AGS,-,not_available
+uncategorized,ext_unreviewed_maximum_torque_cng_(nm_@_rpm),1.2L ZXi+ MT,-,not_available
+uncategorized,ext_unreviewed_maximum_torque_cng_(nm_@_rpm),1.2L ZXi+ AGS,-,not_available
+uncategorized,ext_unreviewed_transmission,1.0L LXi MT,MT,standard
+uncategorized,ext_unreviewed_transmission,1.0L LXi CNG MT,MT,standard
+uncategorized,ext_unreviewed_transmission,1.0L VXi MT,MT,standard
+uncategorized,ext_unreviewed_transmission,1.0L VXi AGS,AGS,standard
+uncategorized,ext_unreviewed_transmission,1.0L VXi CNG MT,MT,standard
+uncategorized,ext_unreviewed_transmission,1.2L ZXi MT,MT,standard
+uncategorized,ext_unreviewed_transmission,1.2L ZXi AGS,AGS,standard
+uncategorized,ext_unreviewed_transmission,1.2L ZXi+ MT,MT,standard
+uncategorized,ext_unreviewed_transmission,1.2L ZXi+ AGS,AGS,standard
+uncategorized,ext_unreviewed_front_suspension,1.0L LXi MT,MacPherson Strut with Coil Spring,standard
+uncategorized,ext_unreviewed_front_suspension,1.0L LXi CNG MT,MacPherson Strut with Coil Spring,standard
+uncategorized,ext_unreviewed_front_suspension,1.0L VXi MT,MacPherson Strut with Coil Spring,standard
+uncategorized,ext_unreviewed_front_suspension,1.0L VXi AGS,MacPherson Strut with Coil Spring,standard
+uncategorized,ext_unreviewed_front_suspension,1.0L VXi CNG MT,MacPherson Strut with Coil Spring,standard
+uncategorized,ext_unreviewed_front_suspension,1.2L ZXi MT,MacPherson Strut with Coil Spring,standard
+uncategorized,ext_unreviewed_front_suspension,1.2L ZXi AGS,MacPherson Strut with Coil Spring,standard
+uncategorized,ext_unreviewed_front_suspension,1.2L ZXi+ MT,MacPherson Strut with Coil Spring,standard
+uncategorized,ext_unreviewed_front_suspension,1.2L ZXi+ AGS,MacPherson Strut with Coil Spring,standard
+uncategorized,ext_unreviewed_rear_suspension,1.0L LXi MT,Torsion Beam with Coil Spring,standard
+uncategorized,ext_unreviewed_rear_suspension,1.0L LXi CNG MT,Torsion Beam with Coil Spring,standard
+uncategorized,ext_unreviewed_rear_suspension,1.0L VXi MT,Torsion Beam with Coil Spring,standard
+uncategorized,ext_unreviewed_rear_suspension,1.0L VXi AGS,Torsion Beam with Coil Spring,standard
+uncategorized,ext_unreviewed_rear_suspension,1.0L VXi CNG MT,Torsion Beam with Coil Spring,standard
+uncategorized,ext_unreviewed_rear_suspension,1.2L ZXi MT,Torsion Beam with Coil Spring,standard
+uncategorized,ext_unreviewed_rear_suspension,1.2L ZXi AGS,Torsion Beam with Coil Spring,standard
+uncategorized,ext_unreviewed_rear_suspension,1.2L ZXi+ MT,Torsion Beam with Coil Spring,standard
+uncategorized,ext_unreviewed_rear_suspension,1.2L ZXi+ AGS,Torsion Beam with Coil Spring,standard
+uncategorized,ext_unreviewed_seating_capacity,1.0L LXi MT,5,standard
+uncategorized,ext_unreviewed_seating_capacity,1.0L LXi CNG MT,5,standard
+uncategorized,ext_unreviewed_seating_capacity,1.0L VXi MT,5,standard
+uncategorized,ext_unreviewed_seating_capacity,1.0L VXi AGS,5,standard
+uncategorized,ext_unreviewed_seating_capacity,1.0L VXi CNG MT,5,standard
+uncategorized,ext_unreviewed_seating_capacity,1.2L ZXi MT,5,standard
+uncategorized,ext_unreviewed_seating_capacity,1.2L ZXi AGS,5,standard
+uncategorized,ext_unreviewed_seating_capacity,1.2L ZXi+ MT,5,standard
+uncategorized,ext_unreviewed_seating_capacity,1.2L ZXi+ AGS,5,standard
+uncategorized,ext_unreviewed_fuel_tank_capacity_(l),1.0L LXi MT,32 (Petrol),standard
+uncategorized,ext_unreviewed_fuel_tank_capacity_(l),1.0L LXi CNG MT,32 (Petrol) / 60 (Water equivalent),standard
+uncategorized,ext_unreviewed_fuel_tank_capacity_(l),1.0L VXi MT,32 (Petrol),standard
+uncategorized,ext_unreviewed_fuel_tank_capacity_(l),1.0L VXi AGS,32 (Petrol),standard
+uncategorized,ext_unreviewed_fuel_tank_capacity_(l),1.0L VXi CNG MT,32 (Petrol) / 60 (Water equivalent),standard
+uncategorized,ext_unreviewed_fuel_tank_capacity_(l),1.2L ZXi MT,32 (Petrol),standard
+uncategorized,ext_unreviewed_fuel_tank_capacity_(l),1.2L ZXi AGS,32 (Petrol),standard
+uncategorized,ext_unreviewed_fuel_tank_capacity_(l),1.2L ZXi+ MT,32 (Petrol),standard
+uncategorized,ext_unreviewed_fuel_tank_capacity_(l),1.2L ZXi+ AGS,32 (Petrol),standard
+uncategorized,ext_unreviewed_boot_space_(litres),1.0L LXi MT,335^ (Petrol),standard
+uncategorized,ext_unreviewed_boot_space_(litres),1.0L LXi CNG MT,335^ (Petrol),standard
+uncategorized,ext_unreviewed_boot_space_(litres),1.0L VXi MT,335^ (Petrol),standard
+uncategorized,ext_unreviewed_boot_space_(litres),1.0L VXi AGS,335^ (Petrol),standard
+uncategorized,ext_unreviewed_boot_space_(litres),1.0L VXi CNG MT,335^ (Petrol),standard
+uncategorized,ext_unreviewed_boot_space_(litres),1.2L ZXi MT,335^ (Petrol),standard
+uncategorized,ext_unreviewed_boot_space_(litres),1.2L ZXi AGS,335^ (Petrol),standard
+uncategorized,ext_unreviewed_boot_space_(litres),1.2L ZXi+ MT,335^ (Petrol),standard
+uncategorized,ext_unreviewed_boot_space_(litres),1.2L ZXi+ AGS,335^ (Petrol),standard
+uncategorized,ext_unreviewed_tyre_size,1.0L LXi MT,155/80R13,standard
+uncategorized,ext_unreviewed_tyre_size,1.0L LXi CNG MT,155/80R13,standard
+uncategorized,ext_unreviewed_tyre_size,1.0L VXi MT,165/70R14,standard
+uncategorized,ext_unreviewed_tyre_size,1.0L VXi AGS,165/70R14,standard
+uncategorized,ext_unreviewed_tyre_size,1.0L VXi CNG MT,165/70R14,standard
+uncategorized,ext_unreviewed_tyre_size,1.2L ZXi MT,165/70R14,standard
+uncategorized,ext_unreviewed_tyre_size,1.2L ZXi AGS,165/70R14,standard
+uncategorized,ext_unreviewed_tyre_size,1.2L ZXi+ MT,165/70R14,standard
+uncategorized,ext_unreviewed_tyre_size,1.2L ZXi+ AGS,165/70R14,standard
+uncategorized,ext_unreviewed_tyre_type,1.0L LXi MT,"Radial & Tubeless, Steel Wheels",standard
+uncategorized,ext_unreviewed_tyre_type,1.0L LXi CNG MT,"Radial & Tubeless, Steel Wheels",standard
+uncategorized,ext_unreviewed_tyre_type,1.0L VXi MT,"Radial & Tubeless, Steel Wheels",standard
+uncategorized,ext_unreviewed_tyre_type,1.0L VXi AGS,"Radial & Tubeless, Steel Wheels",standard
+uncategorized,ext_unreviewed_tyre_type,1.0L VXi CNG MT,"Radial & Tubeless, Steel Wheels",standard
+uncategorized,ext_unreviewed_tyre_type,1.2L ZXi MT,"Radial & Tubeless, Steel Wheels",standard
+uncategorized,ext_unreviewed_tyre_type,1.2L ZXi AGS,"Radial & Tubeless, Steel Wheels",standard
+uncategorized,ext_unreviewed_tyre_type,1.2L ZXi+ MT,"Radial & Tubeless, Alloy Wheels",standard
+uncategorized,ext_unreviewed_tyre_type,1.2L ZXi+ AGS,"Radial & Tubeless, Alloy Wheels",standard
+uncategorized,ext_unreviewed_front_brakes,1.0L LXi MT,Disc,standard
+uncategorized,ext_unreviewed_front_brakes,1.0L LXi CNG MT,Disc,standard
+uncategorized,ext_unreviewed_front_brakes,1.0L VXi MT,Disc,standard
+uncategorized,ext_unreviewed_front_brakes,1.0L VXi AGS,Disc,standard
+uncategorized,ext_unreviewed_front_brakes,1.0L VXi CNG MT,Disc,standard
+uncategorized,ext_unreviewed_front_brakes,1.2L ZXi MT,Disc,standard
+uncategorized,ext_unreviewed_front_brakes,1.2L ZXi AGS,Disc,standard
+uncategorized,ext_unreviewed_front_brakes,1.2L ZXi+ MT,Disc,standard
+uncategorized,ext_unreviewed_front_brakes,1.2L ZXi+ AGS,Disc,standard
+uncategorized,ext_unreviewed_rear_brakes,1.0L LXi MT,Drum,standard
+uncategorized,ext_unreviewed_rear_brakes,1.0L LXi CNG MT,Drum,standard
+uncategorized,ext_unreviewed_rear_brakes,1.0L VXi MT,Drum,standard
+uncategorized,ext_unreviewed_rear_brakes,1.0L VXi AGS,Drum,standard
+uncategorized,ext_unreviewed_rear_brakes,1.0L VXi CNG MT,Drum,standard
+uncategorized,ext_unreviewed_rear_brakes,1.2L ZXi MT,Drum,standard
+uncategorized,ext_unreviewed_rear_brakes,1.2L ZXi AGS,Drum,standard
+uncategorized,ext_unreviewed_rear_brakes,1.2L ZXi+ MT,Drum,standard
+uncategorized,ext_unreviewed_rear_brakes,1.2L ZXi+ AGS,Drum,standard
+uncategorized,ext_unreviewed_gross_vehicle_weight_(kg),1.0L LXi MT,1340,standard
+uncategorized,ext_unreviewed_gross_vehicle_weight_(kg),1.0L LXi CNG MT,1340,standard
+uncategorized,ext_unreviewed_gross_vehicle_weight_(kg),1.0L VXi MT,1340,standard
+uncategorized,ext_unreviewed_gross_vehicle_weight_(kg),1.0L VXi AGS,1340,standard
+uncategorized,ext_unreviewed_gross_vehicle_weight_(kg),1.0L VXi CNG MT,1340,standard
+uncategorized,ext_unreviewed_gross_vehicle_weight_(kg),1.2L ZXi MT,1340,standard
+uncategorized,ext_unreviewed_gross_vehicle_weight_(kg),1.2L ZXi AGS,1340,standard
+uncategorized,ext_unreviewed_gross_vehicle_weight_(kg),1.2L ZXi+ MT,1340,standard
+uncategorized,ext_unreviewed_gross_vehicle_weight_(kg),1.2L ZXi+ AGS,1340,standard
+uncategorized,ext_unreviewed_kerb_weight_(kg),1.0L LXi MT,825,standard
+uncategorized,ext_unreviewed_kerb_weight_(kg),1.0L LXi CNG MT,925,standard
+uncategorized,ext_unreviewed_kerb_weight_(kg),1.0L VXi MT,840,standard
+uncategorized,ext_unreviewed_kerb_weight_(kg),1.0L VXi AGS,845,standard
+uncategorized,ext_unreviewed_kerb_weight_(kg),1.0L VXi CNG MT,935,standard
+uncategorized,ext_unreviewed_kerb_weight_(kg),1.2L ZXi MT,850,standard
+uncategorized,ext_unreviewed_kerb_weight_(kg),1.2L ZXi AGS,855,standard
+uncategorized,ext_unreviewed_kerb_weight_(kg),1.2L ZXi+ MT,855,standard
+uncategorized,ext_unreviewed_kerb_weight_(kg),1.2L ZXi+ AGS,860,standard
+uncategorized,ext_unreviewed_17.78_cm_smartplay_studio_with_smartphone_navigation,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_17.78_cm_smartplay_studio_with_smartphone_navigation,1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_17.78_cm_smartplay_studio_with_smartphone_navigation,1.0L VXi,-,not_available
+uncategorized,ext_unreviewed_17.78_cm_smartplay_studio_with_smartphone_navigation,1.0L VXi AGS,-,not_available
+uncategorized,ext_unreviewed_17.78_cm_smartplay_studio_with_smartphone_navigation,1.0L VXi CNG,-,not_available
+uncategorized,ext_unreviewed_17.78_cm_smartplay_studio_with_smartphone_navigation,1.2L ZXi,-,not_available
+uncategorized,ext_unreviewed_17.78_cm_smartplay_studio_with_smartphone_navigation,1.2L ZXi AGS,-,not_available
+uncategorized,ext_unreviewed_17.78_cm_smartplay_studio_with_smartphone_navigation,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_17.78_cm_smartplay_studio_with_smartphone_navigation,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_smartplay_dock,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_smartplay_dock,1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_smartplay_dock,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_smartplay_dock,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_smartplay_dock,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_smartplay_dock,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_smartplay_dock,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_smartplay_dock,1.2L ZXi+,-,not_available
+uncategorized,ext_unreviewed_smartplay_dock,1.2L ZXi+ AGS,-,not_available
+uncategorized,ext_unreviewed_apple_carplay_and_android_auto,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_apple_carplay_and_android_auto,1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_apple_carplay_and_android_auto,1.0L VXi,-,not_available
+uncategorized,ext_unreviewed_apple_carplay_and_android_auto,1.0L VXi AGS,-,not_available
+uncategorized,ext_unreviewed_apple_carplay_and_android_auto,1.0L VXi CNG,-,not_available
+uncategorized,ext_unreviewed_apple_carplay_and_android_auto,1.2L ZXi,-,not_available
+uncategorized,ext_unreviewed_apple_carplay_and_android_auto,1.2L ZXi AGS,-,not_available
+uncategorized,ext_unreviewed_apple_carplay_and_android_auto,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_apple_carplay_and_android_auto,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_bluetooth,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_bluetooth,1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_bluetooth,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_bluetooth,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_bluetooth,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_bluetooth,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_bluetooth,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_bluetooth,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_bluetooth,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_number_of_speakers,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_number_of_speakers,1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_number_of_speakers,1.0L VXi,2,standard
+uncategorized,ext_unreviewed_number_of_speakers,1.0L VXi AGS,2,standard
+uncategorized,ext_unreviewed_number_of_speakers,1.0L VXi CNG,2,standard
+uncategorized,ext_unreviewed_number_of_speakers,1.2L ZXi,2,standard
+uncategorized,ext_unreviewed_number_of_speakers,1.2L ZXi AGS,2,standard
+uncategorized,ext_unreviewed_number_of_speakers,1.2L ZXi+,4,standard
+uncategorized,ext_unreviewed_number_of_speakers,1.2L ZXi+ AGS,4,standard
+uncategorized,ext_unreviewed_steering_mounted_audio_control,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_steering_mounted_audio_control,1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_steering_mounted_audio_control,1.0L VXi,-,not_available
+uncategorized,ext_unreviewed_steering_mounted_audio_control,1.0L VXi AGS,-,not_available
+uncategorized,ext_unreviewed_steering_mounted_audio_control,1.0L VXi CNG,-,not_available
+uncategorized,ext_unreviewed_steering_mounted_audio_control,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_steering_mounted_audio_control,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_steering_mounted_audio_control,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_steering_mounted_audio_control,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_steering_mounted_voice_control,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_steering_mounted_voice_control,1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_steering_mounted_voice_control,1.0L VXi,-,not_available
+uncategorized,ext_unreviewed_steering_mounted_voice_control,1.0L VXi AGS,-,not_available
+uncategorized,ext_unreviewed_steering_mounted_voice_control,1.0L VXi CNG,-,not_available
+uncategorized,ext_unreviewed_steering_mounted_voice_control,1.2L ZXi,-,not_available
+uncategorized,ext_unreviewed_steering_mounted_voice_control,1.2L ZXi AGS,-,not_available
+uncategorized,ext_unreviewed_steering_mounted_voice_control,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_steering_mounted_voice_control,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_side_and_curtain_airbags*^,1.0L LXi,Standard,standard
+uncategorized,ext_unreviewed_side_and_curtain_airbags*^,1.0L LXi CNG,Standard,standard
+uncategorized,ext_unreviewed_side_and_curtain_airbags*^,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_side_and_curtain_airbags*^,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_side_and_curtain_airbags*^,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_side_and_curtain_airbags*^,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_side_and_curtain_airbags*^,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_side_and_curtain_airbags*^,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_side_and_curtain_airbags*^,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_dual_front_airbags_(driver_and_co-driver)*^,1.0L LXi,Standard,standard
+uncategorized,ext_unreviewed_dual_front_airbags_(driver_and_co-driver)*^,1.0L LXi CNG,Standard,standard
+uncategorized,ext_unreviewed_dual_front_airbags_(driver_and_co-driver)*^,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_dual_front_airbags_(driver_and_co-driver)*^,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_dual_front_airbags_(driver_and_co-driver)*^,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_dual_front_airbags_(driver_and_co-driver)*^,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_dual_front_airbags_(driver_and_co-driver)*^,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_dual_front_airbags_(driver_and_co-driver)*^,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_dual_front_airbags_(driver_and_co-driver)*^,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_abs_with_ebd,1.0L LXi,Standard,standard
+uncategorized,ext_unreviewed_abs_with_ebd,1.0L LXi CNG,Standard,standard
+uncategorized,ext_unreviewed_abs_with_ebd,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_abs_with_ebd,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_abs_with_ebd,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_abs_with_ebd,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_abs_with_ebd,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_abs_with_ebd,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_abs_with_ebd,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_electronic_stability_program_(esp),1.0L LXi,Standard,standard
+uncategorized,ext_unreviewed_electronic_stability_program_(esp),1.0L LXi CNG,Standard,standard
+uncategorized,ext_unreviewed_electronic_stability_program_(esp),1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_electronic_stability_program_(esp),1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_electronic_stability_program_(esp),1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_electronic_stability_program_(esp),1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_electronic_stability_program_(esp),1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_electronic_stability_program_(esp),1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_electronic_stability_program_(esp),1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_seat_belt_pre-tensioner_&_force_limiters_(dr.+co-dr.),1.0L LXi,Standard,standard
+uncategorized,ext_unreviewed_seat_belt_pre-tensioner_&_force_limiters_(dr.+co-dr.),1.0L LXi CNG,Standard,standard
+uncategorized,ext_unreviewed_seat_belt_pre-tensioner_&_force_limiters_(dr.+co-dr.),1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_seat_belt_pre-tensioner_&_force_limiters_(dr.+co-dr.),1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_seat_belt_pre-tensioner_&_force_limiters_(dr.+co-dr.),1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_seat_belt_pre-tensioner_&_force_limiters_(dr.+co-dr.),1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_seat_belt_pre-tensioner_&_force_limiters_(dr.+co-dr.),1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_seat_belt_pre-tensioner_&_force_limiters_(dr.+co-dr.),1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_seat_belt_pre-tensioner_&_force_limiters_(dr.+co-dr.),1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_seat_belt_reminder_with_buzzer_(front_&_rear_seat),1.0L LXi,Standard,standard
+uncategorized,ext_unreviewed_seat_belt_reminder_with_buzzer_(front_&_rear_seat),1.0L LXi CNG,Standard,standard
+uncategorized,ext_unreviewed_seat_belt_reminder_with_buzzer_(front_&_rear_seat),1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_seat_belt_reminder_with_buzzer_(front_&_rear_seat),1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_seat_belt_reminder_with_buzzer_(front_&_rear_seat),1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_seat_belt_reminder_with_buzzer_(front_&_rear_seat),1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_seat_belt_reminder_with_buzzer_(front_&_rear_seat),1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_seat_belt_reminder_with_buzzer_(front_&_rear_seat),1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_seat_belt_reminder_with_buzzer_(front_&_rear_seat),1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_3-point_seat_belts_for_all_seats,1.0L LXi,Standard,standard
+uncategorized,ext_unreviewed_3-point_seat_belts_for_all_seats,1.0L LXi CNG,Standard,standard
+uncategorized,ext_unreviewed_3-point_seat_belts_for_all_seats,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_3-point_seat_belts_for_all_seats,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_3-point_seat_belts_for_all_seats,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_3-point_seat_belts_for_all_seats,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_3-point_seat_belts_for_all_seats,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_3-point_seat_belts_for_all_seats,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_3-point_seat_belts_for_all_seats,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_speed_alert_system*^,1.0L LXi,Standard,standard
+uncategorized,ext_unreviewed_speed_alert_system*^,1.0L LXi CNG,Standard,standard
+uncategorized,ext_unreviewed_speed_alert_system*^,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_speed_alert_system*^,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_speed_alert_system*^,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_speed_alert_system*^,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_speed_alert_system*^,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_speed_alert_system*^,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_speed_alert_system*^,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_speed_sensitive_auto_door_lock,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_speed_sensitive_auto_door_lock,1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_speed_sensitive_auto_door_lock,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_speed_sensitive_auto_door_lock,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_speed_sensitive_auto_door_lock,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_speed_sensitive_auto_door_lock,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_speed_sensitive_auto_door_lock,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_speed_sensitive_auto_door_lock,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_speed_sensitive_auto_door_lock,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_security_alarm,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_security_alarm,1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_security_alarm,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_security_alarm,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_security_alarm,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_security_alarm,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_security_alarm,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_security_alarm,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_security_alarm,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_rear_parking_sensors,1.0L LXi,Standard,standard
+uncategorized,ext_unreviewed_rear_parking_sensors,1.0L LXi CNG,Standard,standard
+uncategorized,ext_unreviewed_rear_parking_sensors,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_rear_parking_sensors,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_rear_parking_sensors,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_rear_parking_sensors,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_rear_parking_sensors,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_rear_parking_sensors,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_rear_parking_sensors,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_central_locking,1.0L LXi,Standard,standard
+uncategorized,ext_unreviewed_central_locking,1.0L LXi CNG,Standard,standard
+uncategorized,ext_unreviewed_central_locking,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_central_locking,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_central_locking,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_central_locking,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_central_locking,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_central_locking,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_central_locking,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_child_proof_rear_door_lock,1.0L LXi,Standard,standard
+uncategorized,ext_unreviewed_child_proof_rear_door_lock,1.0L LXi CNG,Standard,standard
+uncategorized,ext_unreviewed_child_proof_rear_door_lock,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_child_proof_rear_door_lock,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_child_proof_rear_door_lock,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_child_proof_rear_door_lock,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_child_proof_rear_door_lock,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_child_proof_rear_door_lock,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_child_proof_rear_door_lock,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_front_fog_lamps,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_front_fog_lamps,1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_front_fog_lamps,1.0L VXi,-,not_available
+uncategorized,ext_unreviewed_front_fog_lamps,1.0L VXi AGS,-,not_available
+uncategorized,ext_unreviewed_front_fog_lamps,1.0L VXi CNG,-,not_available
+uncategorized,ext_unreviewed_front_fog_lamps,1.2L ZXi,-,not_available
+uncategorized,ext_unreviewed_front_fog_lamps,1.2L ZXi AGS,-,not_available
+uncategorized,ext_unreviewed_front_fog_lamps,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_front_fog_lamps,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_hill_hold_assist,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_hill_hold_assist,1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_hill_hold_assist,1.0L VXi,-,not_available
+uncategorized,ext_unreviewed_hill_hold_assist,1.0L VXi AGS,AGS,standard
+uncategorized,ext_unreviewed_hill_hold_assist,1.0L VXi CNG,-,not_available
+uncategorized,ext_unreviewed_hill_hold_assist,1.2L ZXi,-,not_available
+uncategorized,ext_unreviewed_hill_hold_assist,1.2L ZXi AGS,AGS,standard
+uncategorized,ext_unreviewed_hill_hold_assist,1.2L ZXi+,-,not_available
+uncategorized,ext_unreviewed_hill_hold_assist,1.2L ZXi+ AGS,AGS,standard
+uncategorized,ext_unreviewed_roof_antenna,1.0L LXi,Standard,standard
+uncategorized,ext_unreviewed_roof_antenna,1.0L LXi CNG,Standard,standard
+uncategorized,ext_unreviewed_roof_antenna,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_roof_antenna,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_roof_antenna,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_roof_antenna,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_roof_antenna,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_roof_antenna,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_roof_antenna,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_full_wheel_cover,1.0L LXi,Center Cap,standard
+uncategorized,ext_unreviewed_full_wheel_cover,1.0L LXi CNG,Center Cap,standard
+uncategorized,ext_unreviewed_full_wheel_cover,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_full_wheel_cover,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_full_wheel_cover,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_full_wheel_cover,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_full_wheel_cover,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_full_wheel_cover,1.2L ZXi+,-,not_available
+uncategorized,ext_unreviewed_full_wheel_cover,1.2L ZXi+ AGS,-,not_available
+uncategorized,ext_unreviewed_alloy_wheels,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_alloy_wheels,1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_alloy_wheels,1.0L VXi,-,not_available
+uncategorized,ext_unreviewed_alloy_wheels,1.0L VXi AGS,-,not_available
+uncategorized,ext_unreviewed_alloy_wheels,1.0L VXi CNG,-,not_available
+uncategorized,ext_unreviewed_alloy_wheels,1.2L ZXi,-,not_available
+uncategorized,ext_unreviewed_alloy_wheels,1.2L ZXi AGS,-,not_available
+uncategorized,ext_unreviewed_alloy_wheels,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_alloy_wheels,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_orvm_with_turn_indicators,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_orvm_with_turn_indicators,1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_orvm_with_turn_indicators,1.0L VXi,-,not_available
+uncategorized,ext_unreviewed_orvm_with_turn_indicators,1.0L VXi AGS,-,not_available
+uncategorized,ext_unreviewed_orvm_with_turn_indicators,1.0L VXi CNG,-,not_available
+uncategorized,ext_unreviewed_orvm_with_turn_indicators,1.2L ZXi,-,not_available
+uncategorized,ext_unreviewed_orvm_with_turn_indicators,1.2L ZXi AGS,-,not_available
+uncategorized,ext_unreviewed_orvm_with_turn_indicators,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_orvm_with_turn_indicators,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_electrical_adjustable_orvm,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_electrical_adjustable_orvm,1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_electrical_adjustable_orvm,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_electrical_adjustable_orvm,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_electrical_adjustable_orvm,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_electrical_adjustable_orvm,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_electrical_adjustable_orvm,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_electrical_adjustable_orvm,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_electrical_adjustable_orvm,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_electrical_retractable_orvm,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_electrical_retractable_orvm,1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_electrical_retractable_orvm,1.0L VXi,-,not_available
+uncategorized,ext_unreviewed_electrical_retractable_orvm,1.0L VXi AGS,-,not_available
+uncategorized,ext_unreviewed_electrical_retractable_orvm,1.0L VXi CNG,-,not_available
+uncategorized,ext_unreviewed_electrical_retractable_orvm,1.2L ZXi,-,not_available
+uncategorized,ext_unreviewed_electrical_retractable_orvm,1.2L ZXi AGS,-,not_available
+uncategorized,ext_unreviewed_electrical_retractable_orvm,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_electrical_retractable_orvm,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_rear_wiper_&_washer,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_rear_wiper_&_washer,1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_rear_wiper_&_washer,1.0L VXi,-,not_available
+uncategorized,ext_unreviewed_rear_wiper_&_washer,1.0L VXi AGS,-,not_available
+uncategorized,ext_unreviewed_rear_wiper_&_washer,1.0L VXi CNG,-,not_available
+uncategorized,ext_unreviewed_rear_wiper_&_washer,1.2L ZXi,-,not_available
+uncategorized,ext_unreviewed_rear_wiper_&_washer,1.2L ZXi AGS,-,not_available
+uncategorized,ext_unreviewed_rear_wiper_&_washer,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_rear_wiper_&_washer,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_b-pillar_black_out_tape,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_b-pillar_black_out_tape,1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_b-pillar_black_out_tape,1.0L VXi,-,not_available
+uncategorized,ext_unreviewed_b-pillar_black_out_tape,1.0L VXi AGS,-,not_available
+uncategorized,ext_unreviewed_b-pillar_black_out_tape,1.0L VXi CNG,-,not_available
+uncategorized,ext_unreviewed_b-pillar_black_out_tape,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_b-pillar_black_out_tape,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_b-pillar_black_out_tape,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_b-pillar_black_out_tape,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_body_coloured_door_handles,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_body_coloured_door_handles,1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_body_coloured_door_handles,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_body_coloured_door_handles,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_body_coloured_door_handles,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_body_coloured_door_handles,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_body_coloured_door_handles,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_body_coloured_door_handles,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_body_coloured_door_handles,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_body_coloured_bumpers,1.0L LXi,Standard,standard
+uncategorized,ext_unreviewed_body_coloured_bumpers,1.0L LXi CNG,Standard,standard
+uncategorized,ext_unreviewed_body_coloured_bumpers,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_body_coloured_bumpers,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_body_coloured_bumpers,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_body_coloured_bumpers,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_body_coloured_bumpers,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_body_coloured_bumpers,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_body_coloured_bumpers,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_body_coloured_orvms,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_body_coloured_orvms,1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_body_coloured_orvms,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_body_coloured_orvms,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_body_coloured_orvms,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_body_coloured_orvms,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_body_coloured_orvms,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_body_coloured_orvms,1.2L ZXi+,Standard (Black in dual tone),standard
+uncategorized,ext_unreviewed_body_coloured_orvms,1.2L ZXi+ AGS,Standard (Black in dual tone),standard
+uncategorized,ext_unreviewed_dual_tone_exteriors,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_dual_tone_exteriors,1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_dual_tone_exteriors,1.0L VXi,-,not_available
+uncategorized,ext_unreviewed_dual_tone_exteriors,1.0L VXi AGS,-,not_available
+uncategorized,ext_unreviewed_dual_tone_exteriors,1.0L VXi CNG,-,not_available
+uncategorized,ext_unreviewed_dual_tone_exteriors,1.2L ZXi,-,not_available
+uncategorized,ext_unreviewed_dual_tone_exteriors,1.2L ZXi AGS,-,not_available
+uncategorized,ext_unreviewed_dual_tone_exteriors,1.2L ZXi+,Standard (Optional),optional
+uncategorized,ext_unreviewed_dual_tone_exteriors,1.2L ZXi+ AGS,Standard (Optional),optional
+uncategorized,ext_unreviewed_dual_tone_interiors,1.0L LXi,Standard,standard
+uncategorized,ext_unreviewed_dual_tone_interiors,1.0L LXi CNG,Standard,standard
+uncategorized,ext_unreviewed_dual_tone_interiors,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_dual_tone_interiors,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_dual_tone_interiors,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_dual_tone_interiors,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_dual_tone_interiors,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_dual_tone_interiors,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_dual_tone_interiors,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_2nd_row_60:40_split_seat,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_2nd_row_60:40_split_seat,1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_2nd_row_60:40_split_seat,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_2nd_row_60:40_split_seat,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_2nd_row_60:40_split_seat,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_2nd_row_60:40_split_seat,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_2nd_row_60:40_split_seat,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_2nd_row_60:40_split_seat,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_2nd_row_60:40_split_seat,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_front_cabin_lamps_(3_positions),1.0L LXi,Standard,standard
+uncategorized,ext_unreviewed_front_cabin_lamps_(3_positions),1.0L LXi CNG,Standard,standard
+uncategorized,ext_unreviewed_front_cabin_lamps_(3_positions),1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_front_cabin_lamps_(3_positions),1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_front_cabin_lamps_(3_positions),1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_front_cabin_lamps_(3_positions),1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_front_cabin_lamps_(3_positions),1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_front_cabin_lamps_(3_positions),1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_front_cabin_lamps_(3_positions),1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_day/night_irvm,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_day/night_irvm,1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_day/night_irvm,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_day/night_irvm,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_day/night_irvm,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_day/night_irvm,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_day/night_irvm,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_day/night_irvm,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_day/night_irvm,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_tilt_steering,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_tilt_steering,1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_tilt_steering,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_tilt_steering,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_tilt_steering,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_tilt_steering,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_tilt_steering,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_tilt_steering,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_tilt_steering,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_steering_wheel_garnish,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_steering_wheel_garnish,1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_steering_wheel_garnish,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_steering_wheel_garnish,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_steering_wheel_garnish,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_steering_wheel_garnish,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_steering_wheel_garnish,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_steering_wheel_garnish,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_steering_wheel_garnish,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_silver_inside_door_handles,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_silver_inside_door_handles,1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_silver_inside_door_handles,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_silver_inside_door_handles,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_silver_inside_door_handles,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_silver_inside_door_handles,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_silver_inside_door_handles,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_silver_inside_door_handles,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_silver_inside_door_handles,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_driver_side_sunvisor_with_ticket_holder,1.0L LXi,Standard,standard
+uncategorized,ext_unreviewed_driver_side_sunvisor_with_ticket_holder,1.0L LXi CNG,Standard,standard
+uncategorized,ext_unreviewed_driver_side_sunvisor_with_ticket_holder,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_driver_side_sunvisor_with_ticket_holder,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_driver_side_sunvisor_with_ticket_holder,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_driver_side_sunvisor_with_ticket_holder,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_driver_side_sunvisor_with_ticket_holder,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_driver_side_sunvisor_with_ticket_holder,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_driver_side_sunvisor_with_ticket_holder,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_front_passenger_side_vanity_mirror_sunvisor,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_front_passenger_side_vanity_mirror_sunvisor,1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_front_passenger_side_vanity_mirror_sunvisor,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_front_passenger_side_vanity_mirror_sunvisor,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_front_passenger_side_vanity_mirror_sunvisor,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_front_passenger_side_vanity_mirror_sunvisor,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_front_passenger_side_vanity_mirror_sunvisor,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_front_passenger_side_vanity_mirror_sunvisor,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_front_passenger_side_vanity_mirror_sunvisor,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_silver_finish_gear_shift_knob,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_silver_finish_gear_shift_knob,1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_silver_finish_gear_shift_knob,1.0L VXi,-,not_available
+uncategorized,ext_unreviewed_silver_finish_gear_shift_knob,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_silver_finish_gear_shift_knob,1.0L VXi CNG,-,not_available
+uncategorized,ext_unreviewed_silver_finish_gear_shift_knob,1.2L ZXi,-,not_available
+uncategorized,ext_unreviewed_silver_finish_gear_shift_knob,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_silver_finish_gear_shift_knob,1.2L ZXi+,-,not_available
+uncategorized,ext_unreviewed_silver_finish_gear_shift_knob,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_instrument_cluster_meter_theme,1.0L LXi,Reddish Amber,standard
+uncategorized,ext_unreviewed_instrument_cluster_meter_theme,1.0L LXi CNG,Reddish Amber,standard
+uncategorized,ext_unreviewed_instrument_cluster_meter_theme,1.0L VXi,Reddish Amber,standard
+uncategorized,ext_unreviewed_instrument_cluster_meter_theme,1.0L VXi AGS,Reddish Amber,standard
+uncategorized,ext_unreviewed_instrument_cluster_meter_theme,1.0L VXi CNG,Reddish Amber,standard
+uncategorized,ext_unreviewed_instrument_cluster_meter_theme,1.2L ZXi,Reddish Amber,standard
+uncategorized,ext_unreviewed_instrument_cluster_meter_theme,1.2L ZXi AGS,Reddish Amber,standard
+uncategorized,ext_unreviewed_instrument_cluster_meter_theme,1.2L ZXi+,White,standard
+uncategorized,ext_unreviewed_instrument_cluster_meter_theme,1.2L ZXi+ AGS,White,standard
+uncategorized,ext_unreviewed_low_fuel_warning,1.0L LXi,Standard,standard
+uncategorized,ext_unreviewed_low_fuel_warning,1.0L LXi CNG,Standard,standard
+uncategorized,ext_unreviewed_low_fuel_warning,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_low_fuel_warning,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_low_fuel_warning,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_low_fuel_warning,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_low_fuel_warning,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_low_fuel_warning,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_low_fuel_warning,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_tachometer,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_tachometer,1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_tachometer,1.0L VXi,-,not_available
+uncategorized,ext_unreviewed_tachometer,1.0L VXi AGS,-,not_available
+uncategorized,ext_unreviewed_tachometer,1.0L VXi CNG,-,not_available
+uncategorized,ext_unreviewed_tachometer,1.2L ZXi,-,not_available
+uncategorized,ext_unreviewed_tachometer,1.2L ZXi AGS,-,not_available
+uncategorized,ext_unreviewed_tachometer,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_tachometer,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_gear_shift_indicator,1.0L LXi,Standard,standard
+uncategorized,ext_unreviewed_gear_shift_indicator,1.0L LXi CNG,Standard,standard
+uncategorized,ext_unreviewed_gear_shift_indicator,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_gear_shift_indicator,1.0L VXi AGS,-,not_available
+uncategorized,ext_unreviewed_gear_shift_indicator,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_gear_shift_indicator,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_gear_shift_indicator,1.2L ZXi AGS,-,not_available
+uncategorized,ext_unreviewed_gear_shift_indicator,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_gear_shift_indicator,1.2L ZXi+ AGS,-,not_available
+uncategorized,ext_unreviewed_gear_position_indicator,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_gear_position_indicator,1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_gear_position_indicator,1.0L VXi,-,not_available
+uncategorized,ext_unreviewed_gear_position_indicator,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_gear_position_indicator,1.0L VXi CNG,-,not_available
+uncategorized,ext_unreviewed_gear_position_indicator,1.2L ZXi,-,not_available
+uncategorized,ext_unreviewed_gear_position_indicator,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_gear_position_indicator,1.2L ZXi+,-,not_available
+uncategorized,ext_unreviewed_gear_position_indicator,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_fuel_consumption_(instantaneous_and_avg.),1.0L LXi,Standard,standard
+uncategorized,ext_unreviewed_fuel_consumption_(instantaneous_and_avg.),1.0L LXi CNG,Standard,standard
+uncategorized,ext_unreviewed_fuel_consumption_(instantaneous_and_avg.),1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_fuel_consumption_(instantaneous_and_avg.),1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_fuel_consumption_(instantaneous_and_avg.),1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_fuel_consumption_(instantaneous_and_avg.),1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_fuel_consumption_(instantaneous_and_avg.),1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_fuel_consumption_(instantaneous_and_avg.),1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_fuel_consumption_(instantaneous_and_avg.),1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_distance_to_empty,1.0L LXi,Standard,standard
+uncategorized,ext_unreviewed_distance_to_empty,1.0L LXi CNG,Standard,standard
+uncategorized,ext_unreviewed_distance_to_empty,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_distance_to_empty,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_distance_to_empty,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_distance_to_empty,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_distance_to_empty,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_distance_to_empty,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_distance_to_empty,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_headlamp_on_warning,1.0L LXi,Standard,standard
+uncategorized,ext_unreviewed_headlamp_on_warning,1.0L LXi CNG,Standard,standard
+uncategorized,ext_unreviewed_headlamp_on_warning,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_headlamp_on_warning,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_headlamp_on_warning,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_headlamp_on_warning,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_headlamp_on_warning,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_headlamp_on_warning,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_headlamp_on_warning,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_door_ajar_warning_lamp,1.0L LXi,Standard,standard
+uncategorized,ext_unreviewed_door_ajar_warning_lamp,1.0L LXi CNG,Standard,standard
+uncategorized,ext_unreviewed_door_ajar_warning_lamp,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_door_ajar_warning_lamp,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_door_ajar_warning_lamp,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_door_ajar_warning_lamp,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_door_ajar_warning_lamp,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_door_ajar_warning_lamp,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_door_ajar_warning_lamp,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_idle_start_stop_(iss),1.0L LXi,Standard (Petrol),standard
+uncategorized,ext_unreviewed_idle_start_stop_(iss),1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_idle_start_stop_(iss),1.0L VXi,Standard (Petrol),standard
+uncategorized,ext_unreviewed_idle_start_stop_(iss),1.0L VXi AGS,Standard (Petrol),standard
+uncategorized,ext_unreviewed_idle_start_stop_(iss),1.0L VXi CNG,-,not_available
+uncategorized,ext_unreviewed_idle_start_stop_(iss),1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_idle_start_stop_(iss),1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_idle_start_stop_(iss),1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_idle_start_stop_(iss),1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_remote_keyless_entry,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_remote_keyless_entry,1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_remote_keyless_entry,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_remote_keyless_entry,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_remote_keyless_entry,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_remote_keyless_entry,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_remote_keyless_entry,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_remote_keyless_entry,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_remote_keyless_entry,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_accessory_socket_front_row_with_storage_space,1.0L LXi,Standard,standard
+uncategorized,ext_unreviewed_accessory_socket_front_row_with_storage_space,1.0L LXi CNG,Standard,standard
+uncategorized,ext_unreviewed_accessory_socket_front_row_with_storage_space,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_accessory_socket_front_row_with_storage_space,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_accessory_socket_front_row_with_storage_space,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_accessory_socket_front_row_with_storage_space,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_accessory_socket_front_row_with_storage_space,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_accessory_socket_front_row_with_storage_space,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_accessory_socket_front_row_with_storage_space,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_power_windows_(fr/rr)_with_dr._side_auto_down_function,1.0L LXi,Only Front,optional
+uncategorized,ext_unreviewed_power_windows_(fr/rr)_with_dr._side_auto_down_function,1.0L LXi CNG,Only Front,optional
+uncategorized,ext_unreviewed_power_windows_(fr/rr)_with_dr._side_auto_down_function,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_power_windows_(fr/rr)_with_dr._side_auto_down_function,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_power_windows_(fr/rr)_with_dr._side_auto_down_function,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_power_windows_(fr/rr)_with_dr._side_auto_down_function,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_power_windows_(fr/rr)_with_dr._side_auto_down_function,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_power_windows_(fr/rr)_with_dr._side_auto_down_function,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_power_windows_(fr/rr)_with_dr._side_auto_down_function,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_ac_&_heater,1.0L LXi,Standard,standard
+uncategorized,ext_unreviewed_ac_&_heater,1.0L LXi CNG,Standard,standard
+uncategorized,ext_unreviewed_ac_&_heater,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_ac_&_heater,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_ac_&_heater,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_ac_&_heater,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_ac_&_heater,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_ac_&_heater,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_ac_&_heater,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_1l_bottle_holders_(all_four_doors_+_floor_console),1.0L LXi,Standard,standard
+uncategorized,ext_unreviewed_1l_bottle_holders_(all_four_doors_+_floor_console),1.0L LXi CNG,Standard,standard
+uncategorized,ext_unreviewed_1l_bottle_holders_(all_four_doors_+_floor_console),1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_1l_bottle_holders_(all_four_doors_+_floor_console),1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_1l_bottle_holders_(all_four_doors_+_floor_console),1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_1l_bottle_holders_(all_four_doors_+_floor_console),1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_1l_bottle_holders_(all_four_doors_+_floor_console),1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_1l_bottle_holders_(all_four_doors_+_floor_console),1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_1l_bottle_holders_(all_four_doors_+_floor_console),1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_rear_parcel_tray,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_rear_parcel_tray,1.0L LXi CNG,Standard,standard
+uncategorized,ext_unreviewed_rear_parcel_tray,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_rear_parcel_tray,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_rear_parcel_tray,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_rear_parcel_tray,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_rear_parcel_tray,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_rear_parcel_tray,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_rear_parcel_tray,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_co-driver_side_front_seat_under_tray_&_rear_back_pocket,1.0L LXi,-,not_available
+uncategorized,ext_unreviewed_co-driver_side_front_seat_under_tray_&_rear_back_pocket,1.0L LXi CNG,-,not_available
+uncategorized,ext_unreviewed_co-driver_side_front_seat_under_tray_&_rear_back_pocket,1.0L VXi,-,not_available
+uncategorized,ext_unreviewed_co-driver_side_front_seat_under_tray_&_rear_back_pocket,1.0L VXi AGS,-,not_available
+uncategorized,ext_unreviewed_co-driver_side_front_seat_under_tray_&_rear_back_pocket,1.0L VXi CNG,-,not_available
+uncategorized,ext_unreviewed_co-driver_side_front_seat_under_tray_&_rear_back_pocket,1.2L ZXi,-,not_available
+uncategorized,ext_unreviewed_co-driver_side_front_seat_under_tray_&_rear_back_pocket,1.2L ZXi AGS,-,not_available
+uncategorized,ext_unreviewed_co-driver_side_front_seat_under_tray_&_rear_back_pocket,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_co-driver_side_front_seat_under_tray_&_rear_back_pocket,1.2L ZXi+ AGS,Standard,standard
+uncategorized,ext_unreviewed_reclining_&_front_sliding_seats,1.0L LXi,Standard,standard
+uncategorized,ext_unreviewed_reclining_&_front_sliding_seats,1.0L LXi CNG,Standard,standard
+uncategorized,ext_unreviewed_reclining_&_front_sliding_seats,1.0L VXi,Standard,standard
+uncategorized,ext_unreviewed_reclining_&_front_sliding_seats,1.0L VXi AGS,Standard,standard
+uncategorized,ext_unreviewed_reclining_&_front_sliding_seats,1.0L VXi CNG,Standard,standard
+uncategorized,ext_unreviewed_reclining_&_front_sliding_seats,1.2L ZXi,Standard,standard
+uncategorized,ext_unreviewed_reclining_&_front_sliding_seats,1.2L ZXi AGS,Standard,standard
+uncategorized,ext_unreviewed_reclining_&_front_sliding_seats,1.2L ZXi+,Standard,standard
+uncategorized,ext_unreviewed_reclining_&_front_sliding_seats,1.2L ZXi+ AGS,Standard,standard

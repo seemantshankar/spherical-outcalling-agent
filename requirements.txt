@@ -24,7 +24,7 @@ Jinja2==3.1.6
 jsonschema==4.25.1
 jsonschema-specifications==2025.9.1
 MarkupSafe==3.0.3
-narwhals==2.16.0
+narwhals==2.17.0
 nodeenv==1.10.0
 numpy==2.0.2
 opencv-python==4.13.0.92
@@ -43,6 +43,9 @@ pydantic_core==2.41.5
 pydeck==0.9.1
 pypdf==3.17.4
 pypdfium2==5.5.0
+pymupdf==1.26.5
+openai==1.65.1
+python-dotenv==1.0.1
 pyright==1.1.408
 python-dateutil==2.9.0.post0
 python-multipart==0.0.20
@@ -65,3 +68,6 @@ typing_extensions==4.15.0
 tzdata==2025.3
 urllib3==2.6.3
 uvicorn==0.39.0
+pytest==8.4.2
+httpx==0.28.1
+psycopg2-binary==2.9.11

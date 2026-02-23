@@ -1,3 +1,9 @@
+from fastapi.testclient import TestClient
+from src.api.main import app
+
+client = TestClient(app)
+
 def test_api_health_check():
-    # Placeholder for FastAPI tests
-    pass
+    response = client.get("/health")
+    assert response.status_code == 200
+    assert response.json() == {"status": "ok", "service": "oem_rag_backend"}

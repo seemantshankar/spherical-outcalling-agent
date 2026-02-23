@@ -1,7 +1,7 @@
 {
-    "venvPath": ".",
+    "venvPath": "/Users/seemantshankar/Documents/Projects/gemini_spherical",
     "venv": "venv",
     "extraPaths": [
-        "."
+        "/Users/seemantshankar/Documents/Projects/gemini_spherical"
     ]
 }
