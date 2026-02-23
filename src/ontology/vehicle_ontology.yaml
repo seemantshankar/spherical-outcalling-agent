@@ -1,0 +1,840 @@
+# Vehicle Ontology Scaffold
+# Based on schema.org/Vehicle, Vehicle Sales Ontology (VSO), and EV/Hybrid extensions.
+
+namespaces:
+  core: "https://schema.org/Vehicle"
+  engine: "https://schema.org/EngineSpecification"
+  vso: "http://www.heppnetz.de/ontologies/vso/ns"
+  ev: "custom_ev_extension"
+
+attributes:
+  # ---------------------------------------------------------------------------
+  # CORE VEHICLE ATTRIBUTES (Agnostic to powertrain)
+  # ---------------------------------------------------------------------------
+  payload:
+    canonical_name: payload
+    namespace: core
+    category: capabilities
+    data_type: numeric
+    units: ["kg", "lbs"]
+    synonyms: ["payload capacity", "max payload"]
+    template: "The maximum payload capacity is {value} {unit}."
+
+  weightTotal:
+    canonical_name: weightTotal
+    namespace: core
+    category: dimensions
+    data_type: numeric
+    units: ["kg", "lbs"]
+    synonyms: ["gross vehicle weight", "gvw", "gross weight"]
+    template: "The total gross weight is {value} {unit}."
+
+  curbWeight:
+    canonical_name: curbWeight # Schema.org actually uses weight, but curbWeight is standard auto
+    namespace: core
+    category: dimensions
+    data_type: numeric
+    units: ["kg", "lbs"]
+    synonyms: ["kerb weight", "kerb_weight", "unladen weight"]
+    template: "The curb weight is {value} {unit}."
+
+  wheelbase:
+    canonical_name: wheelbase
+    namespace: core
+    category: dimensions
+    data_type: numeric
+    units: ["mm", "inches"]
+    synonyms: ["wheel base"]
+    template: "The wheelbase measures {value} {unit}."
+    
+  overall_length:
+    canonical_name: overall_length
+    namespace: core
+    category: dimensions
+    data_type: numeric
+    units: ["mm", "inches"]
+    synonyms: ["length", "total length"]
+    template: "The overall length is {value} {unit}."
+
+  seatingCapacity:
+    canonical_name: seatingCapacity
+    namespace: core
+    category: comfort_convenience
+    data_type: numeric
+    units: ["seats", "persons"]
+    synonyms: ["seating", "seats", "passenger capacity"]
+    template: "It has a seating capacity of {value} {unit}."
+
+  power_windows:
+    canonical_name: power_windows
+    namespace: vso
+    category: comfort_convenience
+    data_type: boolean
+    synonyms: ["electric windows", "auto windows", "power glass"]
+    template: "Power windows are {value}."
+
+  water_wading:
+    canonical_name: water_wading
+    namespace: ev # often categorized under offroad, but generic capability
+    category: capability
+    data_type: numeric
+    units: ["mm"]
+    synonyms: ["wading depth", "water wading depth"]
+    template: "The water wading depth is {value} {unit}."
+
+  dual_tone_exterior:
+    canonical_name: dual_tone_exterior
+    namespace: vso
+    category: exterior
+    data_type: boolean
+    synonyms: ["dual tone", "two tone roof"]
+    template: "The dual tone exterior is {value}."
+
+  # ---------------------------------------------------------------------------
+  # POWERTRAIN (Generic properties for ICE, EV, HEV)
+  # ---------------------------------------------------------------------------
+  vehicleTransmission:
+    canonical_name: vehicleTransmission
+    namespace: core
+    category: powertrain
+    data_type: categorical
+    enumerations: ["Manual", "Automatic", "CVT", "DCT", "Direct Drive"]
+    synonyms: ["transmission", "gearbox"]
+    template: "The vehicle comes with a {value} transmission."
+
+  driveWheelConfiguration:
+    canonical_name: driveWheelConfiguration
+    namespace: core
+    category: powertrain
+    data_type: categorical
+    enumerations: ["FWD", "RWD", "AWD", "4WD"]
+    synonyms: ["drive type", "drivetrain"]
+    template: "The drive configuration is {value}."
+
+  # ---------------------------------------------------------------------------
+  # ICE SPECIFICS (Internal Combustion Engine)
+  # ---------------------------------------------------------------------------
+  fuel_efficiency:
+    canonical_name: fuelEfficiency
+    namespace: core
+    category: ice_spec
+    data_type: numeric
+    units: ["kmpl", "mpg", "l/100km"]
+    synonyms: ["mileage", "fuel economy", "milage", "fuel consumption"]
+    template: "The certified mileage is {value} {unit}."
+
+  engineDisplacement:
+    canonical_name: engineDisplacement
+    namespace: engine
+    category: ice_spec
+    data_type: numeric
+    units: ["cc", "liters"]
+    synonyms: ["displacement", "engine capacity", "cc"]
+    template: "The engine displacement is {value} {unit}."
+
+  enginePower:
+    canonical_name: enginePower
+    namespace: engine
+    category: ice_spec
+    data_type: numeric
+    units: ["bhp", "hp", "kW", "PS"]
+    synonyms: ["max power", "peak power", "horsepower"]
+    template: "The engine produces a maximum power of {value} {unit}."
+
+#  torque:
+#    canonical_name: torque
+#    namespace: engine
+#    category: ice_spec
+#    data_type: numeric
+#    units: ["Nm", "kgm", "lb-ft"]
+#    synonyms: ["max torque", "peak torque"]
+#    template: "The peak torque is {value} {unit}."
+
+  fuelType:
+    canonical_name: fuelType
+    namespace: engine
+    category: ice_spec
+    data_type: categorical
+    enumerations: ["Petrol", "Diesel", "CNG", "LPG", "Ethanol"]
+    synonyms: ["fuel", "fuel options"]
+    template: "The fuel type is {value}."
+
+  # ---------------------------------------------------------------------------
+  # EV SPECIFICS (Electric Vehicles)
+  # ---------------------------------------------------------------------------
+  battery_capacity:
+    canonical_name: batteryCapacity
+    namespace: ev
+    category: ev_spec
+    data_type: numeric
+    units: ["kWh"]
+    synonyms: ["battery pack", "battery size", "pack capacity"]
+    template: "The battery capacity is {value} {unit}."
+
+  electric_motor_power:
+    canonical_name: electricMotorPower
+    namespace: ev
+    category: ev_spec
+    data_type: numeric
+    units: ["kW", "hp", "PS"]
+    synonyms: ["motor power", "electric motor output"]
+    template: "The electric motor generates {value} {unit} of power."
+
+  range_certified:
+    canonical_name: rangeCertified
+    namespace: ev
+    category: ev_spec
+    data_type: numeric
+    units: ["km", "miles"]
+    synonyms: ["driving range", "range_wltp_km", "range_arai_km", "EV range"]
+    template: "The official driving range is {value} {unit} per charge."
+
+  ac_charging_time:
+    canonical_name: acChargingTime
+    namespace: ev
+    category: ev_spec
+    data_type: numeric
+    units: ["hours"]
+    synonyms: ["charging_time_0_100", "home charging time", "slow charge time"]
+    template: "The AC charging time from 0 to 100% is approximately {value} {unit}."
+
+  dc_fast_charging_time:
+    canonical_name: dcFastChargingTime
+    namespace: ev
+    category: ev_spec
+    data_type: numeric
+    units: ["minutes"]
+    synonyms: ["fast charge time", "charge_time_10_80", "rapid charging"]
+    template: "The DC fast charging time is {value} {unit}."
+
+  battery_thermal_management:
+    canonical_name: batteryThermalManagement
+    namespace: ev
+    category: ev_spec
+    data_type: categorical
+    enumerations: ["Liquid Cooled", "Air Cooled", "Passive"]
+    synonyms: ["cooling system", "thermal management"]
+    template: "The battery uses a {value} thermal management system."
+
+  # ---------------------------------------------------------------------------
+  # HYBRID SPECIFICS (HEV)
+  # ---------------------------------------------------------------------------
+  system_total_power:
+    canonical_name: systemTotalPower
+    namespace: hev_spec
+    category: hev_spec
+    data_type: numeric
+    units: ["bhp", "hp", "kW", "PS"]
+    synonyms: ["combined power", "total system output"]
+    template: "The combined hybrid system output is {value} {unit}."
+
+  # --- EXTRACTED FROM BROCHURE ---
+  17.78_cm_smartplay_studio_with_smartphone_navigation:
+    canonical_name: 17.78_cm_smartplay_studio_with_smartphone_navigation
+    namespace: core
+    category: infotainment
+    data_type: boolean
+    synonyms: ["Navigation System", "Touchscreen Infotainment", "Smartplay Studio", "Head Unit"]
+    template: "The 17.78 cm smartplay studio with smartphone navigation is {value}."
+  1l_bottle_holders_(all_four_doors_+_floor_console):
+    canonical_name: 1l_bottle_holders_(all_four_doors_+_floor_console)
+    namespace: core
+    category: exterior
+    data_type: boolean
+    synonyms: ["Bottle Holders", "Cup Holders", "Door Storage"]
+    template: "The 1l bottle holders (all four doors + floor console) is {value}."
+  2nd_row_60:40_split_seat:
+    canonical_name: 2nd_row_60:40_split_seat
+    namespace: core
+    category: interior_and_comfort
+    data_type: boolean
+    synonyms: ["Split Folding Rear Seats", "60:40 Seats", "Folding Back Seats"]
+    template: "The 2nd row 60:40 split seat is {value}."
+  3-point_seat_belts_for_all_seats:
+    canonical_name: 3-point_seat_belts_for_all_seats
+    namespace: core
+    category: interior_and_comfort
+    data_type: boolean
+    synonyms: ["Seat Belts", "3-Point Belts", "Safety Belts"]
+    template: "The 3-point seat belts for all seats is {value}."
+  abs_with_ebd:
+    canonical_name: abs_with_ebd
+    namespace: core
+    category: safety
+    data_type: boolean
+    synonyms: ["ABS", "Anti-lock Braking System", "EBD", "Electronic Brakeforce Distribution"]
+    template: "The abs with ebd is {value}."
+  ac_&_heater:
+    canonical_name: ac_&_heater
+    namespace: core
+    category: interior_and_comfort
+    data_type: boolean
+    synonyms: ["Air Conditioning", "AC", "Heater", "Climate Control"]
+    template: "The ac & heater is {value}."
+  accessory_socket_front_row_with_storage_space:
+    canonical_name: accessory_socket_front_row_with_storage_space
+    namespace: core
+    category: interior_and_comfort
+    data_type: boolean
+    synonyms: ["12V Socket", "Power Outlet", "Front Charging Port"]
+    template: "The accessory socket front row with storage space is {value}."
+  alloy_wheels:
+    canonical_name: alloy_wheels
+    namespace: core
+    category: exterior
+    data_type: boolean
+    synonyms: ["Alloys", "Alloy Wheels", "Rims"]
+    template: "The alloy wheels is {value}."
+  apple_carplay_and_android_auto:
+    canonical_name: apple_carplay_and_android_auto
+    namespace: core
+    category: infotainment
+    data_type: boolean
+    synonyms: ["Apple CarPlay", "Android Auto", "Smartphone Integration"]
+    template: "The apple carplay and android auto is {value}."
+  b-pillar_black_out_tape:
+    canonical_name: b-pillar_black_out_tape
+    namespace: core
+    category: interior_and_comfort
+    data_type: boolean
+    synonyms: ["Black B-Pillar", "Blackened Pillars", "B-Pillar Tape"]
+    template: "The b-pillar black out tape is {value}."
+  bluetooth:
+    canonical_name: bluetooth
+    namespace: core
+    category: infotainment
+    data_type: boolean
+    synonyms: ["Bluetooth Connectivity", "Wireless Audio", "Hands-Free"]
+    template: "The bluetooth is {value}."
+  body_coloured_bumpers:
+    canonical_name: body_coloured_bumpers
+    namespace: core
+    category: exterior
+    data_type: boolean
+    synonyms: ["Painted Bumpers", "Body Color Bumpers"]
+    template: "The body coloured bumpers is {value}."
+  body_coloured_door_handles:
+    canonical_name: body_coloured_door_handles
+    namespace: core
+    category: exterior
+    data_type: boolean
+    synonyms: ["Painted Door Handles", "Body Color Handles"]
+    template: "The body coloured door handles is {value}."
+  body_coloured_orvms:
+    canonical_name: body_coloured_orvms
+    namespace: core
+    category: exterior
+    data_type: boolean
+    synonyms: ["Painted Mirrors", "Body Color ORVMs", "Side Mirrors"]
+    template: "The body coloured orvms is {value}."
+  boot_space_(litres):
+    canonical_name: boot_space_(litres)
+    namespace: core
+    category: interior_and_comfort
+    data_type: boolean
+    synonyms: ["Boot Space", "Trunk Capacity", "Luggage Space", "Cargo Volume"]
+    template: "The boot space (litres) is {value}."
+  capacity_(cc):
+    canonical_name: capacity_(cc)
+    namespace: core
+    category: dimensions_and_capacities
+    data_type: numeric
+    synonyms: ["Engine Capacity", "Displacement", "CC", "Engine Volume"]
+    template: "The capacity (cc) is {value}."
+  central_locking:
+    canonical_name: central_locking
+    namespace: core
+    category: uncategorized
+    data_type: boolean
+    synonyms: ["Central Locking", "Power Locks", "Door Locks"]
+    template: "The central locking is {value}."
+  child_proof_rear_door_lock:
+    canonical_name: child_proof_rear_door_lock
+    namespace: core
+    category: exterior
+    data_type: boolean
+    synonyms: ["Child Safety Locks", "Child Locks", "Rear Door Locks"]
+    template: "The child proof rear door lock is {value}."
+  co-driver_side_front_seat_under_tray_&_rear_back_pocket:
+    canonical_name: co-driver_side_front_seat_under_tray_&_rear_back_pocket
+    namespace: core
+    category: interior_and_comfort
+    data_type: boolean
+    synonyms: ["Under Seat Storage", "Seat Back Pocket", "Storage Tray"]
+    template: "The co-driver side front seat under tray & rear back pocket is {value}."
+  day/night_irvm:
+    canonical_name: day/night_irvm
+    namespace: core
+    category: uncategorized
+    data_type: boolean
+    synonyms: ["Day/Night Mirror", "IRVM", "Inside Rear View Mirror", "Auto-dimming Mirror"]
+    template: "The day/night irvm is {value}."
+  distance_to_empty:
+    canonical_name: distance_to_empty
+    namespace: core
+    category: uncategorized
+    data_type: boolean
+    synonyms: ["DTE", "Range Indicator", "Distance to Empty"]
+    template: "The distance to empty is {value}."
+  door_ajar_warning_lamp:
+    canonical_name: door_ajar_warning_lamp
+    namespace: core
+    category: safety
+    data_type: boolean
+    synonyms: ["Door Open Warning", "Door Ajar Indicator"]
+    template: "The door ajar warning lamp is {value}."
+  driver_side_sunvisor_with_ticket_holder:
+    canonical_name: driver_side_sunvisor_with_ticket_holder
+    namespace: core
+    category: interior_and_comfort
+    data_type: boolean
+    synonyms: ["Sun Visor", "Sun Shades", "Driver Visor", "Ticket Holder"]
+    template: "The driver side sunvisor with ticket holder is {value}."
+  dual_front_airbags_(driver_and_co-driver)*^:
+    canonical_name: dual_front_airbags_(driver_and_co-driver)*^
+    namespace: core
+    category: safety
+    data_type: boolean
+    synonyms: ["Dual Airbags", "Front Airbags", "Driver and Passenger Airbags"]
+    template: "The dual front airbags (driver and co-driver)*^ is {value}."
+  dual_tone_exteriors:
+    canonical_name: dual_tone_exteriors
+    namespace: core
+    category: uncategorized
+    data_type: boolean
+    synonyms: ["Two-Tone Paint", "Dual Tone Body", "Contrast Roof"]
+    template: "The dual tone exteriors is {value}."
+  dual_tone_interiors:
+    canonical_name: dual_tone_interiors
+    namespace: core
+    category: uncategorized
+    data_type: boolean
+    synonyms: ["Two-Tone Cabin", "Dual Tone Interiors"]
+    template: "The dual tone interiors is {value}."
+  electrical_adjustable_orvm:
+    canonical_name: electrical_adjustable_orvm
+    namespace: core
+    category: exterior
+    data_type: boolean
+    synonyms: ["Power Mirrors", "Electric ORVMs", "Adjustable Side Mirrors"]
+    template: "The electrical adjustable orvm is {value}."
+  electrical_retractable_orvm:
+    canonical_name: electrical_retractable_orvm
+    namespace: core
+    category: exterior
+    data_type: boolean
+    synonyms: ["Power Folding Mirrors", "Auto-folding ORVMs", "Retractable Mirrors"]
+    template: "The electrical retractable orvm is {value}."
+  electronic_stability_program:
+    canonical_name: electronic_stability_program
+    namespace: core
+    category: uncategorized
+    data_type: boolean
+    synonyms: ["ESP", "Stability Control", "ESC"]
+    template: "The electronic stability program is {value}."
+  electronic_stability_program_(esp):
+    canonical_name: electronic_stability_program_(esp)
+    namespace: core
+    category: safety
+    data_type: boolean
+    synonyms: ["ESP", "Stability Control", "ESC"]
+    template: "The electronic stability program (esp) is {value}."
+  engine_type:
+    canonical_name: engine_type
+    namespace: core
+    category: ice_spec
+    data_type: categorical
+    synonyms: ["Engine Model", "Engine Code", "Engine Type"]
+    template: "The engine type is {value}."
+  front_brakes:
+    canonical_name: front_brakes
+    namespace: core
+    category: safety
+    data_type: categorical
+    synonyms: ["Front Brakes", "Brake Type"]
+    template: "The front brakes is {value}."
+  front_cabin_lamps_(3_positions):
+    canonical_name: front_cabin_lamps_(3_positions)
+    namespace: core
+    category: exterior
+    data_type: boolean
+    synonyms: ["Cabin Lights", "Roof Lamps", "Interior Lighting"]
+    template: "The front cabin lamps (3 positions) is {value}."
+  front_fog_lamps:
+    canonical_name: front_fog_lamps
+    namespace: core
+    category: exterior
+    data_type: boolean
+    synonyms: ["Fog Lights", "Fog Lamps", "Front Foggers"]
+    template: "The front fog lamps is {value}."
+  front_passenger_side_vanity_mirror_sunvisor:
+    canonical_name: front_passenger_side_vanity_mirror_sunvisor
+    namespace: core
+    category: exterior
+    data_type: boolean
+    synonyms: ["Vanity Mirror", "Passenger Sunvisor", "Makeup Mirror"]
+    template: "The front passenger side vanity mirror sunvisor is {value}."
+  front_suspension:
+    canonical_name: front_suspension
+    namespace: core
+    category: ice_spec
+    data_type: categorical
+    synonyms: ["Front Suspension", "Front Shocks"]
+    template: "The front suspension is {value}."
+  fuel_consumption_(instantaneous_and_avg.):
+    canonical_name: fuel_consumption_(instantaneous_and_avg.)
+    namespace: core
+    category: uncategorized
+    data_type: boolean
+    synonyms: ["Fuel Economy Display", "Average Mileage", "Instant Fuel Consumption"]
+    template: "The fuel consumption (instantaneous and avg.) is {value}."
+  fuel_tank_capacity_(l):
+    canonical_name: fuel_tank_capacity_(l)
+    namespace: core
+    category: dimensions_and_capacities
+    data_type: numeric
+    synonyms: ["Fuel Tank", "Tank Capacity", "Gas Tank Size", "fuel tank capacity"]
+    template: "The fuel tank capacity (l) is {value}."
+  full_wheel_cover:
+    canonical_name: full_wheel_cover
+    namespace: core
+    category: exterior
+    data_type: boolean
+    synonyms: ["Wheel Covers", "Hubcaps", "Wheel Caps"]
+    template: "The full wheel cover is {value}."
+  gear_position_indicator:
+    canonical_name: gear_position_indicator
+    namespace: core
+    category: uncategorized
+    data_type: boolean
+    synonyms: ["Gear Indicator", "Gear Display"]
+    template: "The gear position indicator is {value}."
+  gear_shift_indicator:
+    canonical_name: gear_shift_indicator
+    namespace: core
+    category: uncategorized
+    data_type: boolean
+    synonyms: ["Shift Indicator", "GSI", "Gear Shift Prompt"]
+    template: "The gear shift indicator is {value}."
+  gross_vehicle_weight_(kg):
+    canonical_name: gross_vehicle_weight_(kg)
+    namespace: core
+    category: dimensions_and_capacities
+    data_type: numeric
+    synonyms: ["GVW", "Gross Weight", "Maximum Weight"]
+    template: "The gross vehicle weight (kg) is {value}."
+  headlamp_on_warning:
+    canonical_name: headlamp_on_warning
+    namespace: core
+    category: safety
+    data_type: boolean
+    synonyms: ["Headlight Warning", "Lights On Chime"]
+    template: "The headlamp on warning is {value}."
+  height_(mm):
+    canonical_name: height_(mm)
+    namespace: core
+    category: dimensions_and_capacities
+    data_type: numeric
+    synonyms: ["Overall Height", "Vehicle Height", "Height"]
+    template: "The height (mm) is {value}."
+  hill_hold_assist:
+    canonical_name: hill_hold_assist
+    namespace: core
+    category: uncategorized
+    data_type: boolean
+    synonyms: ["Hill Hold", "Hill Start Assist", "HSA"]
+    template: "The hill hold assist is {value}."
+  idle_start_stop_(iss):
+    canonical_name: idle_start_stop_(iss)
+    namespace: core
+    category: uncategorized
+    data_type: boolean
+    synonyms: ["Idle Start Stop", "Auto Start Stop", "ISS", "Micro Hybrid"]
+    template: "The idle start stop (iss) is {value}."
+  instrument_cluster_meter_theme:
+    canonical_name: instrument_cluster_meter_theme
+    namespace: core
+    category: uncategorized
+    data_type: categorical
+    synonyms: ["Cluster Theme", "Meter Color", "Dials Theme"]
+    template: "The instrument cluster meter theme is {value}."
+  kerb_weight_(kg):
+    canonical_name: kerb_weight_(kg)
+    namespace: core
+    category: dimensions_and_capacities
+    data_type: numeric
+    synonyms: ["Kerb Weight", "Curb Weight", "Unladen Weight"]
+    template: "The kerb weight (kg) is {value}."
+  length_(mm):
+    canonical_name: length_(mm)
+    namespace: core
+    category: dimensions_and_capacities
+    data_type: numeric
+    synonyms: ["Overall Length", "Vehicle Length", "Length"]
+    template: "The length (mm) is {value}."
+  low_fuel_warning:
+    canonical_name: low_fuel_warning
+    namespace: core
+    category: safety
+    data_type: boolean
+    synonyms: ["Low Fuel Indicator", "Fuel Light", "Reserve Warning"]
+    template: "The low fuel warning is {value}."
+  maximum_engine_output_cng_(kw_@_rpm):
+    canonical_name: maximum_engine_output_cng_(kw_@_rpm)
+    namespace: core
+    category: ice_spec
+    data_type: numeric
+    synonyms: ["CNG Power", "Max Power CNG", "CNG Output"]
+    template: "The maximum engine output cng (kw @ rpm) is {value}."
+  maximum_engine_output_petrol_(kw_@_rpm):
+    canonical_name: maximum_engine_output_petrol_(kw_@_rpm)
+    namespace: core
+    category: ice_spec
+    data_type: numeric
+    synonyms: ["Petrol Power", "Max Power Petrol", "Petrol Output"]
+    template: "The maximum engine output petrol (kw @ rpm) is {value}."
+  maximum_torque_cng_(nm_@_rpm):
+    canonical_name: maximum_torque_cng_(nm_@_rpm)
+    namespace: core
+    category: ice_spec
+    data_type: numeric
+    synonyms: ["CNG Torque", "Max Torque CNG", "Maximum Torque (CNG) (Nm @ rpm)"]
+    template: "The maximum torque cng (nm @ rpm) is {value}."
+  maximum_torque_petrol_(nm_@_rpm):
+    canonical_name: maximum_torque_petrol_(nm_@_rpm)
+    namespace: core
+    category: ice_spec
+    data_type: numeric
+    synonyms: ["Petrol Torque", "Max Torque Petrol", "Maximum Torque (Petrol) (Nm @ rpm)", "torque"]
+    template: "The maximum torque petrol (nm @ rpm) is {value}."
+  number_of_cylinders:
+    canonical_name: number_of_cylinders
+    namespace: core
+    category: ice_spec
+    data_type: numeric
+    synonyms: ["Cylinders", "Engine Cylinders"]
+    template: "The number of cylinders is {value}."
+  number_of_speakers:
+    canonical_name: number_of_speakers
+    namespace: core
+    category: infotainment
+    data_type: boolean
+    synonyms: ["Speakers", "Audio System Speakers"]
+    template: "The number of speakers is {value}."
+  orvm_with_turn_indicators:
+    canonical_name: orvm_with_turn_indicators
+    namespace: core
+    category: exterior
+    data_type: boolean
+    synonyms: ["Mirrors with Indicators", "Blinker Mirrors", "ORVM Indicators"]
+    template: "The orvm with turn indicators is {value}."
+  power_windows_(fr/rr)_with_dr._side_auto_down_function:
+    canonical_name: power_windows_(fr/rr)_with_dr._side_auto_down_function
+    namespace: core
+    category: interior_and_comfort
+    data_type: boolean
+    synonyms: ["Power Windows", "Auto Down Window", "Electric Windows"]
+    template: "The power windows (fr/rr) with dr. side auto down function is {value}."
+  rear_brakes:
+    canonical_name: rear_brakes
+    namespace: core
+    category: safety
+    data_type: categorical
+    synonyms: ["Rear Brakes", "Brake Type"]
+    template: "The rear brakes is {value}."
+  rear_parcel_tray:
+    canonical_name: rear_parcel_tray
+    namespace: core
+    category: interior_and_comfort
+    data_type: boolean
+    synonyms: ["Parcel Tray", "Rear Shelf", "Trunk Cover"]
+    template: "The rear parcel tray is {value}."
+  rear_parking_sensors:
+    canonical_name: rear_parking_sensors
+    namespace: core
+    category: safety
+    data_type: boolean
+    synonyms: ["Parking Sensors", "Reverse Sensors", "Backup Sensors"]
+    template: "The rear parking sensors is {value}."
+  rear_suspension:
+    canonical_name: rear_suspension
+    namespace: core
+    category: ice_spec
+    data_type: categorical
+    synonyms: ["Rear Suspension", "Rear Shocks"]
+    template: "The rear suspension is {value}."
+  rear_wiper_&_washer:
+    canonical_name: rear_wiper_&_washer
+    namespace: core
+    category: exterior
+    data_type: boolean
+    synonyms: ["Rear Wiper", "Rear Washer", "Back Window Wiper"]
+    template: "The rear wiper & washer is {value}."
+  reclining_&_front_sliding_seats:
+    canonical_name: reclining_&_front_sliding_seats
+    namespace: core
+    category: interior_and_comfort
+    data_type: boolean
+    synonyms: ["Sliding Seats", "Reclining Seats", "Adjustable Front Seats"]
+    template: "The reclining & front sliding seats is {value}."
+  remote_keyless_entry:
+    canonical_name: remote_keyless_entry
+    namespace: core
+    category: uncategorized
+    data_type: boolean
+    synonyms: ["Keyless Entry", "Remote Locking", "Smart Key"]
+    template: "The remote keyless entry is {value}."
+  roof_antenna:
+    canonical_name: roof_antenna
+    namespace: core
+    category: exterior
+    data_type: boolean
+    synonyms: ["Antenna", "Radio Antenna"]
+    template: "The roof antenna is {value}."
+  seat_belt_pre-tensioner_&_force_limiters_(dr.+co-dr.):
+    canonical_name: seat_belt_pre-tensioner_&_force_limiters_(dr.+co-dr.)
+    namespace: core
+    category: interior_and_comfort
+    data_type: boolean
+    synonyms: ["Pre-tensioners", "Force Limiters", "Advanced Seatbelts"]
+    template: "The seat belt pre-tensioner & force limiters (dr.+co-dr.) is {value}."
+  seat_belt_reminder_with_buzzer_(front_&_rear_seat):
+    canonical_name: seat_belt_reminder_with_buzzer_(front_&_rear_seat)
+    namespace: core
+    category: interior_and_comfort
+    data_type: boolean
+    synonyms: ["Seatbelt Reminder", "Seatbelt Alarm", "Belt Chime"]
+    template: "The seat belt reminder with buzzer (front & rear seat) is {value}."
+  seating_capacity:
+    canonical_name: seating_capacity
+    namespace: core
+    category: dimensions_and_capacities
+    data_type: numeric
+    synonyms: ["Seating Capacity", "Seats", "Number of Seats"]
+    template: "The seating capacity is {value}."
+  security_alarm:
+    canonical_name: security_alarm
+    namespace: core
+    category: safety
+    data_type: boolean
+    synonyms: ["Security Alarm", "Anti-theft Alarm", "Car Alarm"]
+    template: "The security alarm is {value}."
+  side_and_curtain_airbags*^:
+    canonical_name: side_and_curtain_airbags*^
+    namespace: core
+    category: safety
+    data_type: boolean
+    synonyms: ["Side Airbags", "Curtain Airbags", "6 Airbags"]
+    template: "The side and curtain airbags*^ is {value}."
+  silver_finish_gear_shift_knob:
+    canonical_name: silver_finish_gear_shift_knob
+    namespace: core
+    category: uncategorized
+    data_type: boolean
+    synonyms: ["Silver Gear Knob", "Gear Lever Finish"]
+    template: "The silver finish gear shift knob is {value}."
+  silver_inside_door_handles:
+    canonical_name: silver_inside_door_handles
+    namespace: core
+    category: exterior
+    data_type: boolean
+    synonyms: ["Silver Door Handles", "Interior Handles"]
+    template: "The silver inside door handles is {value}."
+  smartplay_dock:
+    canonical_name: smartplay_dock
+    namespace: core
+    category: infotainment
+    data_type: boolean
+    synonyms: ["Smartplay Dock", "Phone Mount", "Audio Dock"]
+    template: "The smartplay dock is {value}."
+  speed_alert_system*^:
+    canonical_name: speed_alert_system*^
+    namespace: core
+    category: uncategorized
+    data_type: boolean
+    synonyms: ["Speed Alert", "Overspeed Warning", "Speed Chime"]
+    template: "The speed alert system*^ is {value}."
+  speed_sensitive_auto_door_lock:
+    canonical_name: speed_sensitive_auto_door_lock
+    namespace: core
+    category: exterior
+    data_type: boolean
+    synonyms: ["Speed Sensing Locks", "Auto Door Locks"]
+    template: "The speed sensitive auto door lock is {value}."
+  steering_mounted_audio_control:
+    canonical_name: steering_mounted_audio_control
+    namespace: core
+    category: interior_and_comfort
+    data_type: boolean
+    synonyms: ["Steering Controls", "Audio Controls", "Steering Buttons"]
+    template: "The steering mounted audio control is {value}."
+  steering_mounted_voice_control:
+    canonical_name: steering_mounted_voice_control
+    namespace: core
+    category: interior_and_comfort
+    data_type: boolean
+    synonyms: ["Voice Command", "Voice Controls", "Steering Voice Button"]
+    template: "The steering mounted voice control is {value}."
+  steering_wheel_garnish:
+    canonical_name: steering_wheel_garnish
+    namespace: core
+    category: exterior
+    data_type: boolean
+    synonyms: ["Steering Finish", "Steering Accent", "Steering Wheel Trim"]
+    template: "The steering wheel garnish is {value}."
+  tachometer:
+    canonical_name: tachometer
+    namespace: core
+    category: interior_and_comfort
+    data_type: boolean
+    synonyms: ["Tachometer", "RPM Gauge", "Rev Counter"]
+    template: "The tachometer is {value}."
+  tilt_steering:
+    canonical_name: tilt_steering
+    namespace: core
+    category: interior_and_comfort
+    data_type: boolean
+    synonyms: ["Tilt Steering", "Adjustable Steering", "Steering Adjustment"]
+    template: "The tilt steering is {value}."
+  transmission:
+    canonical_name: transmission
+    namespace: core
+    category: ice_spec
+    data_type: categorical
+    synonyms: ["Gearbox", "Transmission Type"]
+    template: "The transmission is {value}."
+  turning_radius_(m):
+    canonical_name: turning_radius_(m)
+    namespace: core
+    category: dimensions_and_capacities
+    data_type: numeric
+    synonyms: ["Turning Radius", "Turning Circle"]
+    template: "The turning radius (m) is {value}."
+  tyre_size:
+    canonical_name: tyre_size
+    namespace: core
+    category: uncategorized
+    data_type: boolean
+    synonyms: ["Tyre Size", "Tire Size", "Wheel Size"]
+    template: "The tyre size is {value}."
+  tyre_type:
+    canonical_name: tyre_type
+    namespace: core
+    category: uncategorized
+    data_type: categorical
+    synonyms: ["Tyre Type", "Tubeless Tyres", "Tire Type"]
+    template: "The tyre type is {value}."
+  wheelbase_(mm):
+    canonical_name: wheelbase_(mm)
+    namespace: core
+    category: dimensions_and_capacities
+    data_type: numeric
+    synonyms: ["Wheelbase", "Wheel Base"]
+    template: "The wheelbase (mm) is {value}."
+  width_(mm):
+    canonical_name: width_(mm)
+    namespace: core
+    category: dimensions_and_capacities
+    data_type: numeric
+    synonyms: ["Overall Width", "Vehicle Width", "Width"]
+    template: "The width (mm) is {value}."

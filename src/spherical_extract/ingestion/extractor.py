@@ -108,7 +108,7 @@ def process_brochure(
                 continue
                 
             feature_id = OntologyEngine.resolve_feature_id(raw_feature)
-            category = OntologyEngine.CORE_FEATURES.get(feature_id, {}).get("category", "uncategorized")
+            category = OntologyEngine._attributes.get(feature_id, {}).get("category", "uncategorized")
             
             import re
             for col_idx, variant_name in enumerate(variants):

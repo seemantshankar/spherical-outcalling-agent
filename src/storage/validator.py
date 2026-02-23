@@ -24,7 +24,7 @@ def validate_completeness_for_campaign(db: Session, campaign_id: str):
         return
 
     # 2. For each variant, ensure all core features exist
-    core_features = list(OntologyEngine.CORE_FEATURES.keys())
+    core_features = list(OntologyEngine._attributes.keys())
     
     missing_facts: List[SpecFact] = []
     
@@ -58,7 +58,7 @@ def validate_completeness_for_campaign(db: Session, campaign_id: str):
                         fuel_type=base_row.fuel_type,
                         drive_type=base_row.drive_type,
                         feature_id=required_feature,
-                        category=OntologyEngine.CORE_FEATURES[required_feature]["category"],
+                        category=OntologyEngine._attributes.get(required_feature, {}).get("category", "uncategorized"),
                         value_json={},  # Empty value for unmentioned facts
                         availability_state=AvailabilityState.not_mentioned,
                         source_doc_id="synthetic_completeness_validator",

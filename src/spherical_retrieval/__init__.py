@@ -120,8 +120,8 @@ class SphericalRetrievalEngine:
         # Fallback Query Path
         if not fact:
             fallback_terms = [resolved_feature_id]
-            if resolved_feature_id in OntologyEngine.CORE_FEATURES:
-                fallback_terms.extend(OntologyEngine.CORE_FEATURES[resolved_feature_id].get("synonyms", []))
+            if resolved_feature_id in OntologyEngine._attributes:
+                fallback_terms.extend(OntologyEngine._attributes[resolved_feature_id].get("synonyms", []))
                 
             fact = self.db.query(SpecFact).filter(
                 SpecFact.oem_id == request.oem_id,

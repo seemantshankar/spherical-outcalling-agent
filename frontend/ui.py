@@ -79,10 +79,10 @@ with tab2:
 
     st.markdown("---")
     
-    # Select from static ontology
-    target_feature = st.selectbox(
-        "Voice Request Feature Intent", 
-        ["fuel_efficiency", "power_windows", "water_wading", "dual_tone_exterior", "overall_length", "ext_unreviewed_custom_term"]
+    # Dynamic text input to test Ontology resolution
+    target_feature = st.text_input(
+        "Voice Request Feature Intent (e.g., 'Smartplay Studio', 'River Crossing')", 
+        value="Smartplay Studio"
     )
 
     if st.button("Execute Vector/Hash Cache Search"):
