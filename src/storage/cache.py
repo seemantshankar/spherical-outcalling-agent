@@ -22,7 +22,7 @@ def get_spec_from_cache(derived_variant_id: str, feature_id: str):
     try:
         data = redis_client.get(key)
         if data:
-            return json.loads(data)
+            return json.loads(str(data))
     except Exception as e:
         logger.error(f"Redis get error for {key}: {e}")
     return None

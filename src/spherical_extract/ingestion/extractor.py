@@ -1,8 +1,8 @@
 import logging
 from typing import List
-from src.ingestion.parser import parse_tables_from_pdf
+from src.spherical_extract.ingestion.parser import parse_tables_from_pdf
 from src.ontology.engine import OntologyEngine
-from src.api.router import generate_variant_hash
+from src.spherical_retrieval import SphericalRetrievalEngine
 from src.storage.schema import SpecFact, AvailabilityState
 
 logger = logging.getLogger(__name__)
@@ -94,7 +94,7 @@ def process_brochure(
                 elif 'O' in cell_val or 'Opt' in cell_val or 'optional' in cell_val.lower():
                     availability = AvailabilityState.optional
                 
-                var_hash = generate_variant_hash(
+                var_hash = SphericalRetrievalEngine.generate_variant_hash(
                     oem_id=oem_id, model_code=model_code, model_year=model_year,
                     trim=clean_variant, engine_code=engine_code,
                     transmission=transmission, fuel_type=fuel_type, region=region

@@ -11,7 +11,7 @@ def parse_tables_from_pdf(filepath: str, pages: str = "all"):
         import camelot
         # flavor 'lattice' is generally best for strict table borders,
         # 'stream' is used for whitespace-separated columns.
-        tables = camelot.read_pdf(filepath, pages=pages, flavor='lattice')
+        tables = camelot.read_pdf(filepath, pages=pages, flavor='lattice') # type: ignore
         logger.info(f"Camelot extracted {tables.n} tables from {filepath} on pages {pages}")
         return tables
     except ImportError:
