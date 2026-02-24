@@ -4,7 +4,7 @@ import os
 import hashlib
 from typing import Optional, cast, Dict, Any, List
 from sqlalchemy.orm import Session
-from src.api.schemas import SpecQueryRequest, SpecQueryResponse, ExtendedSpecQueryResponse, CrossSellSuggestion
+from src.api.schemas import SpecQueryRequest, SpecQueryResponse, ExtendedSpecQueryResponse, CrossSellSuggestion, CampaignMetadataResponse
 from src.storage.database import get_db
 
 from src.spherical_extract import SphericalExtractor
@@ -41,6 +41,13 @@ async def upload_brochure(
         # Use library for ingestion
         extractor = SphericalExtractor(db_session=db)
         
+        # Format the single configuration into the new batch format
+        configs = [{
+            "engine": engine_code,
+            "trans": transmission,
+            "fuel": fuel_type
+        }]
+
         extracted_facts = extractor.ingest_brochure(
             filepath=temp_path,
             oem_id=oem_id,
@@ -48,9 +55,7 @@ async def upload_brochure(
             model_code=model_code,
             model_year=model_year,
             region=region,
-            engine_code=engine_code,
-            transmission=transmission,
-            fuel_type=fuel_type
+            configs=configs
         )
         
         if not extracted_facts:
@@ -65,6 +70,20 @@ async def upload_brochure(
         raise HTTPException(status_code=500, detail=f"Extraction failed: {str(e)}")
     finally:
         os.remove(temp_path)
+
+@router.get("/metadata", response_model=CampaignMetadataResponse)
+def get_campaign_metadata(
+    oem_id: str,
+    campaign_id: str,
+    model_code: str,
+    db: Session = Depends(get_db)
+):
+    """
+    Returns unique variants and configurations for a campaign to populate UI dropdowns.
+    """
+    engine = SphericalRetrievalEngine(db_session=db)
+    metadata = engine.get_campaign_metadata(oem_id, campaign_id, model_code)
+    return metadata
 
 @router.post("/query", response_model=ExtendedSpecQueryResponse)
 def query_spec(request: SpecQueryRequest, db: Session = Depends(get_db)):

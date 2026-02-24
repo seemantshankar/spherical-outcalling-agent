@@ -12,6 +12,16 @@ st.markdown("This interface visualizes the **Phase 1: Ingestion & Extraction Cor
 import os
 BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000/retrieval")
 
+def fetch_metadata(oem, campaign, model):
+    try:
+        params = {"oem_id": oem, "campaign_id": campaign, "model_code": model}
+        res = requests.get(f"{BACKEND_URL}/metadata", params=params)
+        if res.status_code == 200:
+            return res.json()
+    except:
+        pass
+    return {"trims": [], "engines": [], "transmissions": [], "fuels": []}
+
 tab1, tab2 = st.tabs(["Ingestion (Upload Brochure)", "Voice Retrieval (Query Data)"])
 
 with tab1:
@@ -71,11 +81,13 @@ with tab2:
         q_year = st.number_input("Query Year", value=2024)
         
     with col4:
+        metadata = fetch_metadata(q_oem, q_campaign, q_model)
+        
         q_region = st.text_input("Query Region", value="IN")
-        q_trim = st.text_input("Inferred Trim (E.g. VXi, ZXi)", value="VXi")
-        q_engine = st.text_input("Inferred Engine", value="K12N")
-        q_trans = st.text_input("Inferred Transmission", value="AMT")
-        q_fuel = st.text_input("Inferred Fuel", value="petrol")
+        q_trim = st.selectbox("Inferred Trim", options=metadata["trims"]) if metadata["trims"] else st.text_input("Inferred Trim (E.g. VXi, ZXi)", value="VXi")
+        q_engine = st.selectbox("Inferred Engine", options=metadata["engines"]) if metadata["engines"] else st.text_input("Inferred Engine", value="K12N")
+        q_trans = st.selectbox("Inferred Transmission", options=metadata["transmissions"]) if metadata["transmissions"] else st.text_input("Inferred Transmission", value="AMT")
+        q_fuel = st.selectbox("Inferred Fuel", options=metadata["fuels"]) if metadata["fuels"] else st.text_input("Inferred Fuel", value="petrol")
 
     st.markdown("---")
     

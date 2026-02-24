@@ -46,3 +46,8 @@ class CrossSellSuggestion(BaseModel):
 
 class ExtendedSpecQueryResponse(SpecQueryResponse):
     cross_sell_suggestions: Optional[List[CrossSellSuggestion]] = None
+class CampaignMetadataResponse(BaseModel):
+    trims: List[str]
+    engines: List[str]
+    transmissions: List[str]
+    fuels: List[str]

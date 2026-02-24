@@ -184,11 +184,13 @@ def parse_tables_with_vision(filepath: str, pages: str):
                     "Extract the data from this image of a table. "
                     "Return a JSON array of arrays, representing the table. "
                     "CRITICAL INSTRUCTIONS FOR NORMALIZE RESTRUCTURING: "
-                    "1. If multiple vehicle trims are grouped in a single column header (e.g. '1.0L LXi, LXi CNG, VXi'), you MUST split them into completely separate, individual columns (e.g. '1.0L LXi', '1.0L LXi CNG', '1.0L VXi'). "
-                    "2. The FIRST array in your response MUST be a header row starting with 'Feature' and followed by EACH INDIVIDUAL TRIM as its own separate column. "
-                    "3. For the data rows, distribute the cell values into the correct newly separated trim columns. If a value applied to a grouped column, duplicate it for all the individual trims in that group. "
-                    "4. TRIM-SPECIFIC FEATURES: If a feature explicitly mentions a trim (e.g. 'Kerb Weight LXi MT' or 'VXi AGS'), place its value ONLY in the corresponding trim column(s) (e.g. cell value under '1.0L LXi') and use '-' for the other unrelated trims. Then simplify the feature name by removing the trim (e.g. 'Kerb Weight'). "
-                    "5. Replace checkmarks ('✓') with 'Standard' and crosses ('x') or hyphens ('-') with '-'. "
+                    "1. If multiple vehicle trims are grouped in a single column header (e.g. 'Trim A, Trim B, Trim C'), you MUST split them into completely separate, individual columns (e.g. 'Trim A', 'Trim B', 'Trim C'). "
+                    "2. The FIRST array in your response MUST be a header row starting exactly with ['Feature', 'Best Effort Category', <EACH INDIVIDUAL TRIM as its own separate column>]. "
+                    "3. For the 'Best Effort Category' column, deduce a 1-2 word semantic category for each feature (e.g. 'Safety', 'Efficiency', 'Exterior', 'Infotainment'). You must infer this based on the feature name. "
+                    "4. For the data rows, distribute the cell values into the correct newly separated trim columns. If a value applied to a grouped column, duplicate it for all the individual trims in that group. "
+                    "5. TRIM-SPECIFIC FEATURES: If a feature explicitly mentions a trim (e.g. 'Kerb Weight Trim A' or 'Trim B AGS'), place its value ONLY in the corresponding trim column(s) and use '-' for the other unrelated trims. Then simplify the feature name by removing the trim (e.g. 'Kerb Weight'). "
+                    "6. MULTI-VALUE PRESERVATION: If a single cell contains multiple values for different configurations (e.g. '32 (Petrol) / 60 (Water equivalent)', '1,000 / 1,200'), YOU MUST return the full string exactly as shown. Do NOT pick just one. If there is a slash or newline, keep the separation. Include all units and parenthetical notes (e.g. '(Petrol)', '(CNG)', '(Water equivalent)').\n"
+                    "7. Replace checkmarks ('✓') with 'Standard' and crosses ('x') or hyphens ('-') with '-'. "
                     "Do NOT include markdown formatting or backticks around the json, just return the raw JSON array."
                 )
 

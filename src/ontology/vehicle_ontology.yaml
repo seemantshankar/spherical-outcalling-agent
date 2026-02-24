@@ -736,7 +736,7 @@ attributes:
   silver_inside_door_handles:
     canonical_name: silver_inside_door_handles
     namespace: core
-    category: exterior
+    category: interior_and_comfort
     data_type: boolean
     synonyms: ["Silver Door Handles", "Interior Handles"]
     template: "The silver inside door handles is {value}."
@@ -778,7 +778,7 @@ attributes:
   steering_wheel_garnish:
     canonical_name: steering_wheel_garnish
     namespace: core
-    category: exterior
+    category: interior_and_comfort
     data_type: boolean
     synonyms: ["Steering Finish", "Steering Accent", "Steering Wheel Trim"]
     template: "The steering wheel garnish is {value}."

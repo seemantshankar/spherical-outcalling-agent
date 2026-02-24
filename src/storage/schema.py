@@ -2,6 +2,7 @@ import enum
 from sqlalchemy import Column, Integer, String, Float, Enum, UniqueConstraint, Index
 from sqlalchemy.dialects.postgresql import ARRAY, JSONB
 from sqlalchemy.orm import declarative_base
+from pgvector.sqlalchemy import Vector
 
 Base = declarative_base()
 
@@ -63,3 +64,14 @@ class SpecFact(Base):
         Index('idx_variant_lookup', 'derived_variant_id', 'feature_id'),
         Index('idx_model_filter', 'model_code', 'model_year', 'region', 'feature_id'),
     )
+
+class OntologyFeatureVector(Base):
+    """
+    Vectorized storage of ontology feature definitions for semantic resolution.
+    """
+    __tablename__ = "ontology_feature_vectors"
+    
+    canonical_id = Column(String, primary_key=True)
+    category = Column(String, nullable=False)
+    description = Column(String, nullable=True)
+    embedding = Column(Vector(1536)) # text-embedding-3-small and text-embedding-ada-002 are 1536 dims

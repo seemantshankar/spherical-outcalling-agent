@@ -43,8 +43,8 @@ class OntologyEngine:
             cls._synonym_map = {}
 
     @classmethod
-    def resolve_feature_id(cls, raw_term: str) -> str:
-        """Resolves a raw brochure term into a standardized feature_id in O(1) time."""
+    def resolve_feature_id(cls, raw_term: str, best_effort_category: str = "uncategorized") -> str:
+        """Resolves a raw brochure term into a standardized feature_id using O(1) dict and PGVector."""
         cls._initialize()
         
         normalized = raw_term.lower().strip()
@@ -53,18 +53,50 @@ class OntologyEngine:
         if normalized in cls._synonym_map:
             return cls._synonym_map[normalized]
             
-        # Fallback 1: Fuzzy String Matching (~5ms penalty)
-        # Handle OCR text errors, trailing spaces, or minor variations (e.g., 'Kerb Weight (kg)' vs 'Kerb Weight')
-        matches = difflib.get_close_matches(normalized, cls._synonym_map.keys(), n=1, cutoff=0.75)
+        # Fallback 1: Strict Fuzzy String Matching (~5ms penalty)
+        matches = difflib.get_close_matches(normalized, cls._synonym_map.keys(), n=1, cutoff=0.85)
         if matches:
             return cls._synonym_map[matches[0]]
             
-        # Fallback 2: Substring keyword matching (e.g., 'weight' solving to 'kerb weight')
-        # Only trigger token search if the query is substantive (>3 chars)
-        if len(normalized) > 3:
-            for syn in cls._synonym_map.keys():
-                if normalized in syn:
-                    return cls._synonym_map[syn]
+        # Fallback 2: PGVector Semantic Search using OpenRouter Embeddings
+        # Solves generic terms like "weight" implicitly resolving to "kerb_weight"
+        try:
+            import os
+            from openai import OpenAI
+            from src.storage.database import SessionLocal
+            from src.storage.schema import OntologyFeatureVector
+            
+            api_key = os.environ.get("OPENROUTER_API_KEY")
+            embedding_model = os.environ.get("EMBEDDINGS_LLM", "openai/text-embedding-3-small")
+            
+            client = OpenAI(base_url="https://openrouter.ai/api/v1", api_key=api_key)
+            semantic_query = f"Feature: {raw_term}\nCategory: {best_effort_category}"
+            
+            res = client.embeddings.create(input=[semantic_query], model=embedding_model)
+            query_embedding = res.data[0].embedding
+            
+            db = SessionLocal()
+            try:
+                # <=>: Cosine distance in pgvector. Distance of 0 means identical, 2 means exactly opposite. 
+                # We want distance < 0.4 (similarity > 0.6)
+                nearest = db.query(OntologyFeatureVector).order_by(
+                    OntologyFeatureVector.embedding.cosine_distance(query_embedding)
+                ).first()
+                
+                # Check distance
+                if nearest:
+                    distance = db.execute(
+                        db.query(OntologyFeatureVector.embedding.cosine_distance(query_embedding))
+                        .filter(OntologyFeatureVector.canonical_id == nearest.canonical_id)
+                        .statement
+                    ).scalar()
+                    
+                    if distance is not None and distance < 0.4:
+                        return str(nearest.canonical_id)
+            finally:
+                db.close()
+        except Exception as e:
+            print(f"Vector search fallback failed for '{raw_term}': {e}")
                 
         # Fallback 3: Unreviewed term extension mechanism
         return f"ext_unreviewed_{normalized.replace(' ', '_')}"

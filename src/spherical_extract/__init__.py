@@ -19,9 +19,8 @@ class SphericalExtractor:
         model_code: str,
         model_year: int,
         region: str,
-        engine_code: str,
-        transmission: str,
-        fuel_type: str
+        configs: List[Dict[str, Any]],
+        doc_type: str = "brochure"
     ) -> List[Any]:
         """
         Ingests a raw brochure PDF, processes its layout, and extracts variant features to the database.
@@ -38,9 +37,8 @@ class SphericalExtractor:
                 model_code=model_code,
                 model_year=model_year,
                 region=region,
-                engine_code=engine_code,
-                transmission=transmission,
-                fuel_type=fuel_type
+                configs=configs,
+                doc_type=doc_type
             )
             
             if not extracted_facts:

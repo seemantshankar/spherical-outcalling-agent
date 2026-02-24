@@ -1,8 +1,9 @@
+import logging
 import hashlib
-from typing import Optional, cast, Dict, Any, List
+from typing import Optional, Dict, Any, cast, List
 from sqlalchemy.orm import Session
 from src.api.schemas import SpecQueryRequest, ExtendedSpecQueryResponse, CrossSellSuggestion
-from src.storage.schema import SpecFact
+from src.storage.schema import SpecFact, AvailabilityState
 
 # Internal modules
 from src.storage.cache import get_spec_from_cache, set_spec_in_cache
@@ -26,10 +27,33 @@ class SphericalRetrievalEngine:
     def __init__(self, db_session: Session):
         self.db = db_session
 
+    def get_campaign_metadata(self, oem_id: str, campaign_id: str, model_code: str) -> Dict[str, List[str]]:
+        """
+        Retrieves unique configuration dimensions for a specific campaign.
+        Used to populate UI dropdowns.
+        """
+        filters = [
+            SpecFact.oem_id == oem_id,
+            SpecFact.campaign_id == campaign_id,
+            SpecFact.model_code == model_code
+        ]
+        
+        trims = [r[0] for r in self.db.query(SpecFact.trim).filter(*filters).distinct().all() if r[0]]
+        engines = [r[0] for r in self.db.query(SpecFact.engine_code).filter(*filters).distinct().all() if r[0]]
+        transmissions = [r[0] for r in self.db.query(SpecFact.transmission).filter(*filters).distinct().all() if r[0]]
+        fuels = [r[0] for r in self.db.query(SpecFact.fuel_type).filter(*filters).distinct().all() if r[0]]
+        
+        return {
+            "trims": sorted(trims),
+            "engines": sorted(engines),
+            "transmissions": sorted(transmissions),
+            "fuels": sorted(fuels)
+        }
+
     @staticmethod
-    def generate_variant_hash(oem_id: str, model_code: str, model_year: int, trim: str, engine_code: str, transmission: str, fuel_type: str, region: str) -> str:
+    def generate_variant_hash(oem: str, model: str, year: int, trim: str, engine: str, trans: str, fuel: str, region: str) -> str:
         """Deterministic hash generator for O(1) variant lookup."""
-        key = f"{oem_id}|{model_code}|{model_year}|{trim}|{engine_code}|{transmission}|{fuel_type}|{region}"
+        key = f"{oem}|{model}|{year}|{trim}|{engine}|{trans}|{fuel}|{region}"
         return hashlib.md5(key.encode("utf-8")).hexdigest()
 
     @classmethod
@@ -117,18 +141,33 @@ class SphericalRetrievalEngine:
             SpecFact.feature_id == resolved_feature_id
         ).first()
 
-        # Fallback Query Path
-        if not fact:
+        # Fallback Query Path (Synonyms)
+        if not fact or fact.availability_state == AvailabilityState.not_mentioned:
             fallback_terms = [resolved_feature_id]
             if resolved_feature_id in OntologyEngine._attributes:
                 fallback_terms.extend(OntologyEngine._attributes[resolved_feature_id].get("synonyms", []))
                 
-            fact = self.db.query(SpecFact).filter(
+            synonym_fact = self.db.query(SpecFact).filter(
                 SpecFact.oem_id == request.oem_id,
                 SpecFact.campaign_id == request.campaign_id,
                 SpecFact.derived_variant_id == derived_variant_id,
-                SpecFact.feature_id.in_(fallback_terms)
+                SpecFact.feature_id.in_(fallback_terms),
+                SpecFact.availability_state != AvailabilityState.not_mentioned
             ).first()
+            if synonym_fact:
+                fact = synonym_fact
+
+        # Fallback 2: Token overlap for highly specific features (e.g. "power_windows" -> "power_windows_(fr/rr)_with_dr._side_auto_down_function")
+        if not fact or fact.availability_state == AvailabilityState.not_mentioned:
+            overlap_fact = self.db.query(SpecFact).filter(
+                SpecFact.oem_id == request.oem_id,
+                SpecFact.campaign_id == request.campaign_id,
+                SpecFact.derived_variant_id == derived_variant_id,
+                SpecFact.feature_id.ilike(f"%{resolved_feature_id}%"),
+                SpecFact.availability_state != AvailabilityState.not_mentioned
+            ).first()
+            if overlap_fact:
+                fact = overlap_fact
 
         if not fact:
             raise LookupError("Feature details not found for this variant.")

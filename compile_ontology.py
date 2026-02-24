@@ -8,7 +8,7 @@ def parse_pseudo_yaml_to_py(filepath, outpath):
     attributes_block = content.split("attributes:")[1]
     
     # Split by the 2-space indented keys
-    raw_features = re.split(r'\n  ([a-zA-Z0-9_\-\(\)\.\+]+):\n', "\n" + attributes_block)
+    raw_features = re.split(r'\n  ([a-zA-Z0-9_\-\(\)\.\+\@]+):\n', "\n" + attributes_block)
     
     # The first element is before the first key, drop it
     raw_features = raw_features[1:]
